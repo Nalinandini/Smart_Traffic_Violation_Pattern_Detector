@@ -5,5 +5,12 @@ __pycache__/
 .env/
 .idea/
 .vscode/
+.pytest_cache/
+metastore_db/
+derby.log
+*.log
+
+# Data outputs & partitions
 data/output/
 data/cleaned_parquet/
+data/aggregations/
