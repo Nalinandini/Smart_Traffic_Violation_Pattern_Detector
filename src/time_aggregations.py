@@ -53,6 +53,10 @@ def main():
     INP = os.path.join(BASE, 'data', 'cleaned_parquet')
     OUTDIR = os.path.join(BASE, 'data', 'aggregations')
     
+    if os.environ.get("TRAFFIC_ENGINE", "").lower() == "pandas":
+        run_pandas(INP, OUTDIR)
+        return
+        
     try:
         run_spark(INP, OUTDIR)
     except Exception as e:

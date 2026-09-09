@@ -4,6 +4,7 @@ import numpy as np
 import altair as alt
 import pydeck as pdk
 import os
+import sys
 
 # Set page config for a premium wide layout
 st.set_page_config(
@@ -27,79 +28,82 @@ st.markdown("""
     
     /* Header styling */
     .main-title {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
         font-weight: 700;
-        background: linear-gradient(90deg, #38BDF8, #818CF8);
+        background: linear-gradient(90deg, #38BDF8, #818CF8, #C084FC);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-bottom: 0.5rem;
-        padding-top: 1rem;
+        margin-bottom: 0.25rem;
+        padding-top: 0.5rem;
     }
     
     .subtitle {
         color: #94A3B8;
-        font-size: 1.1rem;
-        margin-bottom: 2rem;
-    }
-    
-    /* Metrics Row */
-    .metrics-container {
-        display: flex;
-        gap: 1.5rem;
-        margin-bottom: 2rem;
+        font-size: 1.05rem;
+        margin-bottom: 1.75rem;
     }
     
     /* Glassmorphism Metric Card */
     .metric-card {
-        flex: 1;
-        background: rgba(30, 41, 59, 0.65);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-left: 4px solid #38BDF8;
+        background: rgba(30, 41, 59, 0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 12px;
-        padding: 1.25rem;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        padding: 1.15rem;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
         transition: all 0.3s ease;
     }
     
     .metric-card:hover {
         transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(56, 189, 248, 0.15);
-        border-color: rgba(56, 189, 248, 0.4);
+        box-shadow: 0 8px 25px rgba(56, 189, 248, 0.2);
     }
     
     .metric-label {
-        font-size: 0.85rem;
+        font-size: 0.82rem;
         color: #94A3B8;
         text-transform: uppercase;
         letter-spacing: 0.08em;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.4rem;
         font-weight: 600;
     }
     
     .metric-value {
-        font-size: 1.8rem;
+        font-size: 1.75rem;
         font-weight: 700;
         color: #F8FAFC;
     }
     
     .metric-desc {
-        font-size: 0.75rem;
+        font-size: 0.76rem;
         color: #34D399;
         margin-top: 0.25rem;
         display: flex;
         align-items: center;
         gap: 4px;
     }
+
+    .alert-banner {
+        background: linear-gradient(90deg, rgba(239, 68, 68, 0.25), rgba(249, 115, 22, 0.2));
+        border-left: 5px solid #EF4444;
+        border-radius: 8px;
+        padding: 0.85rem 1.2rem;
+        margin-bottom: 1.5rem;
+        color: #FECACA;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 0.95rem;
+    }
     
     /* Sections styling */
     .section-header {
-        font-size: 1.4rem;
+        font-size: 1.25rem;
         font-weight: 600;
         color: #38BDF8;
         border-bottom: 1px solid rgba(56, 189, 248, 0.2);
-        padding-bottom: 0.5rem;
-        margin-bottom: 1.25rem;
+        padding-bottom: 0.4rem;
+        margin-bottom: 1rem;
         margin-top: 1.5rem;
     }
 </style>
@@ -110,11 +114,9 @@ def load_csv_output(path):
     if os.path.isfile(path):
         return pd.read_csv(path)
     elif os.path.isdir(path):
-        # Look for part-*.csv first
         csv_files = [f for f in os.listdir(path) if f.startswith('part-') and f.endswith('.csv')]
         if csv_files:
             return pd.read_csv(os.path.join(path, csv_files[0]))
-        # Fall back to any csv in directory
         csv_files = [f for f in os.listdir(path) if f.endswith('.csv')]
         if csv_files:
             return pd.read_csv(os.path.join(path, csv_files[0]))
@@ -140,30 +142,61 @@ try:
     df_time_type = load_csv_output(os.path.join(DATA_DIR, "output", "time_type_aggregation.csv"))
     df_locations = load_csv_output(os.path.join(DATA_DIR, "output", "violations_per_location_csv"))
     df_clusters = load_csv_output(os.path.join(DATA_DIR, "output", "hotspot_clusters_csv"))
-    df_hourly = load_parquet_output(os.path.join(DATA_DIR, "aggregations", "per_hour"))
+    
+    # Optional extended datasets
+    try:
+        df_risk_hourly = load_csv_output(os.path.join(DATA_DIR, "output", "hourly_risk_anomaly_csv"))
+    except Exception:
+        df_risk_hourly = pd.DataFrame()
+        
+    try:
+        df_centroids = load_csv_output(os.path.join(DATA_DIR, "output", "cluster_centroids_csv"))
+    except Exception:
+        df_centroids = pd.DataFrame()
+        
+    try:
+        df_matrix = load_csv_output(os.path.join(DATA_DIR, "output", "time_type_matrix_csv"))
+    except Exception:
+        df_matrix = pd.DataFrame()
+
     data_loaded = True
 except Exception as e:
     st.error(f"Error loading processed data: {str(e)}")
-    st.info("Ensure the data processing pipeline has run successfully by executing `python src/data_cleaning.py` and the aggregation scripts.")
+    st.info("Click 'Run / Refresh Pipeline' in the sidebar to generate data and run all analytical models.")
     data_loaded = False
 
+# ------------------ SIDEBAR CONTROLS & PIPELINE ------------------
+st.sidebar.markdown("<h2 style='color:#38BDF8; font-weight:700;'>Traffic Control Center</h2>", unsafe_allow_html=True)
+
+# 1. Pipeline Execution Box
+st.sidebar.markdown("### ⚙️ Pipeline Execution")
+regen_data = st.sidebar.checkbox("Regenerate Synthetic Data", value=False, help="Create fresh random mock data before processing")
+
+if st.sidebar.button("⚡ Run / Refresh Pipeline", use_container_width=True):
+    with st.spinner("Running full ETL, KMeans clustering, and anomaly detection..."):
+        try:
+            if BASE_DIR not in sys.path:
+                sys.path.insert(0, BASE_DIR)
+            from run_pipeline import execute_pipeline
+            os.environ["TRAFFIC_ENGINE"] = "pandas"
+            execute_pipeline(generate_mock=regen_data)
+            st.sidebar.success("Pipeline executed successfully!")
+            st.rerun()
+        except Exception as err:
+            st.sidebar.error(f"Pipeline error: {str(err)}")
+
+st.sidebar.markdown("---")
+
 if data_loaded:
-    # ------------------ SIDEBAR FILTERS ------------------
-    st.sidebar.markdown(
-        "<h2 style='color:#38BDF8; font-weight:700;'>Dashboard Filters</h2>", 
-        unsafe_allow_html=True
-    )
-    st.sidebar.markdown("Filter analytics dynamically:")
-    
-    # Filter by violation type
+    # 2. Interactive Dynamic Filters
+    st.sidebar.markdown("### 🔍 Filter Analytics")
     all_violations = sorted(df_time_type['Violation_Type'].unique())
     selected_violations = st.sidebar.multiselect(
-        "Violation Types",
+        "Violation Categories",
         options=all_violations,
         default=all_violations
     )
     
-    # Filter by Day of Week
     days_order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
     selected_days = st.sidebar.multiselect(
         "Days of the Week",
@@ -171,18 +204,38 @@ if data_loaded:
         default=days_order
     )
     
-    # Apply filters to dataframes
+    # Filter dataset
     df_time_filtered = df_time_type[
         df_time_type['Violation_Type'].isin(selected_violations) & 
         df_time_type['DayOfWeek'].isin(selected_days)
     ]
     
+    # Severity weight mapping for risk scoring
+    SEVERITY_DICT = {
+        "DUI": 10, "Reckless Driving": 8, "Red Light Violation": 7,
+        "Speeding": 6, "Using Mobile Phone": 4, "Illegal Turn": 3, "Seatbelt Violation": 2
+    }
+    
     # ------------------ HEADER SECTION ------------------
     st.markdown("<div class='main-title'>🚦 Smart Traffic Violation Pattern Detector</div>", unsafe_allow_html=True)
-    st.markdown("<div class='subtitle'>Interactive analytics, peak frequency patterns, and geospatial hotspot clustering</div>", unsafe_allow_html=True)
+    st.markdown("<div class='subtitle'>Real-time multi-dimensional traffic violation intelligence, ML spatial clustering, and automated surge anomaly detection.</div>", unsafe_allow_html=True)
     
-    # ------------------ METRICS ROW ------------------
-    # Calculate key metrics
+    # Check for active critical anomalies
+    if not df_risk_hourly.empty:
+        critical_spikes = df_risk_hourly[df_risk_hourly['anomaly_level'] == 'CRITICAL SPIKE']
+        if not critical_spikes.empty:
+            spike_hours = ", ".join([f"{int(h):02d}:00" for h in critical_spikes['Hour']])
+            st.markdown(f"""
+            <div class='alert-banner'>
+                <span style='font-size:1.3rem;'>⚠️</span>
+                <div>
+                    <strong>CRITICAL TRAFFIC VIOLATION SURGE DETECTED:</strong> Unusual statistical spike at peak hour(s) <strong>{spike_hours}</strong>.
+                    Deploy rapid enforcement units to top hotspot corridors immediately.
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+    
+    # ------------------ KPI METRIC CARDS ------------------
     total_violations = df_time_filtered['count'].sum() if len(df_time_filtered) > 0 else 0
     
     if len(df_time_filtered) > 0:
@@ -198,11 +251,18 @@ if data_loaded:
         
     top_loc = df_locations.iloc[0]['Location'] if len(df_locations) > 0 else "N/A"
     
-    # Custom CSS-based metric cards layout
+    # Calculate weighted risk total
+    if len(df_time_filtered) > 0:
+        weighted_risk = sum(df_time_filtered['count'] * df_time_filtered['Violation_Type'].map(lambda x: SEVERITY_DICT.get(x, 3)))
+        avg_severity = weighted_risk / total_violations if total_violations > 0 else 0
+    else:
+        weighted_risk = 0
+        avg_severity = 0
+
     cols = st.columns(4)
     with cols[0]:
         st.markdown(f"""
-        <div class="metric-card" style="border-left-color: #38BDF8;">
+        <div class="metric-card" style="border-left: 4px solid #38BDF8;">
             <div class="metric-label">Total Violations</div>
             <div class="metric-value">{total_violations:,}</div>
             <div class="metric-desc">🟢 Live filter metrics active</div>
@@ -211,157 +271,211 @@ if data_loaded:
         
     with cols[1]:
         st.markdown(f"""
-        <div class="metric-card" style="border-left-color: #EC4899;">
+        <div class="metric-card" style="border-left: 4px solid #EC4899;">
             <div class="metric-label">Primary Infraction</div>
-            <div class="metric-value" style="font-size:1.4rem; padding-top:0.35rem; padding-bottom:0.35rem;">{top_type}</div>
+            <div class="metric-value" style="font-size:1.35rem; padding-top:0.35rem; padding-bottom:0.35rem;">{top_type}</div>
             <div class="metric-desc">🔥 {top_type_val:,} total incidents</div>
         </div>
         """, unsafe_allow_html=True)
         
     with cols[2]:
         st.markdown(f"""
-        <div class="metric-card" style="border-left-color: #F59E0B;">
-            <div class="metric-label">Peak Traffic Hour</div>
+        <div class="metric-card" style="border-left: 4px solid #F59E0B;">
+            <div class="metric-label">Peak Traffic Rush</div>
             <div class="metric-value">{peak_hour_str}</div>
-            <div class="metric-desc">🕒 Heavy violation rush</div>
+            <div class="metric-desc">🕒 Peak congestion rush</div>
         </div>
         """, unsafe_allow_html=True)
         
     with cols[3]:
         st.markdown(f"""
-        <div class="metric-card" style="border-left-color: #10B981;">
-            <div class="metric-label">Primary Hotspot</div>
-            <div class="metric-value" style="font-size:1.15rem; padding-top:0.6rem; padding-bottom:0.6rem;">{top_loc}</div>
-            <div class="metric-desc">📍 Most dangerous intersection</div>
+        <div class="metric-card" style="border-left: 4px solid #A855F7;">
+            <div class="metric-label">Avg Severity Index</div>
+            <div class="metric-value">{avg_severity:.1f} / 10</div>
+            <div class="metric-desc">⚡ {weighted_risk:,} total risk points</div>
         </div>
         """, unsafe_allow_html=True)
         
-    # ------------------ GRAPHS SECTION ------------------
-    layout_cols = st.columns([1, 1])
+    # ------------------ TEMPORAL CHARTS SECTION ------------------
+    col_t1, col_t2 = st.columns(2)
     
-    with layout_cols[0]:
-        st.markdown("<div class='section-header'>⏰ Violation Frequency by Time of Day</div>", unsafe_allow_html=True)
+    with col_t1:
+        st.markdown("<div class='section-header'>⏰ Violation Frequency by Hour of Day</div>", unsafe_allow_html=True)
         if len(df_time_filtered) > 0:
             hourly_data = df_time_filtered.groupby('Hour')['count'].sum().reset_index()
             
-            # Altair Premium Line Chart
             hourly_chart = alt.Chart(hourly_data).mark_area(
                 line={'color': '#38BDF8', 'size': 3},
                 color=alt.Gradient(
                     gradient='linear',
-                    stops=[alt.GradientStop(color='rgba(56, 189, 248, 0.4)', offset=0),
-                           alt.GradientStop(color='rgba(56, 189, 248, 0.0)', offset=1)],
+                    stops=[alt.GradientStop(color='rgba(56, 189, 248, 0.45)', offset=0),
+                           alt.GradientStop(color='rgba(56, 189, 248, 0.02)', offset=1)],
                     x1=1, y1=1, x2=1, y2=0
                 )
             ).encode(
-                x=alt.X('Hour:Q', title='Hour of the Day (0-23)', scale=alt.Scale(domain=[0, 23])),
-                y=alt.Y('count:Q', title='Number of Violations'),
+                x=alt.X('Hour:Q', title='Hour of Day (00:00 - 23:00)', scale=alt.Scale(domain=[0, 23])),
+                y=alt.Y('count:Q', title='Violations Recorded'),
                 tooltip=['Hour', 'count']
-            ).properties(
-                height=320
-            ).configure_axis(
-                gridColor='rgba(255, 255, 255, 0.05)',
-                labelColor='#94A3B8',
-                titleColor='#94A3B8',
-                domain=False
-            ).configure_view(
-                strokeWidth=0
-            )
+            ).properties(height=300).configure_axis(
+                gridColor='rgba(255, 255, 255, 0.06)', labelColor='#94A3B8', titleColor='#94A3B8', domain=False
+            ).configure_view(strokeWidth=0)
+            
             st.altair_chart(hourly_chart, use_container_width=True)
         else:
-            st.info("No data available for the selected filters.")
+            st.info("No data available for the current filter criteria.")
             
-    with layout_cols[1]:
-        st.markdown("<div class='section-header'>📅 Violation Distribution by Day of Week</div>", unsafe_allow_html=True)
+    with col_t2:
+        st.markdown("<div class='section-header'>📅 Day of Week Volume Distribution</div>", unsafe_allow_html=True)
         if len(df_time_filtered) > 0:
             daily_data = df_time_filtered.groupby('DayOfWeek')['count'].sum().reindex(selected_days).reset_index()
             
-            # Altair Premium Bar Chart
             daily_chart = alt.Chart(daily_data).mark_bar(
                 color='#818CF8',
                 cornerRadiusTopLeft=6,
                 cornerRadiusTopRight=6
             ).encode(
-                x=alt.X('DayOfWeek:N', title='Day of the Week', sort=days_order),
-                y=alt.Y('count:Q', title='Number of Violations'),
+                x=alt.X('DayOfWeek:N', title='Day of Week', sort=days_order),
+                y=alt.Y('count:Q', title='Violations Recorded'),
                 tooltip=['DayOfWeek', 'count']
-            ).properties(
-                height=320
-            ).configure_axis(
-                gridColor='rgba(255, 255, 255, 0.05)',
-                labelColor='#94A3B8',
-                titleColor='#94A3B8',
-                domain=False
-            ).configure_view(
-                strokeWidth=0
-            )
+            ).properties(height=300).configure_axis(
+                gridColor='rgba(255, 255, 255, 0.06)', labelColor='#94A3B8', titleColor='#94A3B8', domain=False
+            ).configure_view(strokeWidth=0)
+            
             st.altair_chart(daily_chart, use_container_width=True)
         else:
-            st.info("No data available for the selected filters.")
+            st.info("No data available for selected days.")
 
-    # ------------------ MAP & CATEGORY BREAKDOWN ------------------
-    layout_cols2 = st.columns([1.25, 0.75])
-    
-    with layout_cols2[0]:
-        st.markdown("<div class='section-header'>🗺️ Machine Learning Clustered Hotspots (KMeans, k=5)</div>", unsafe_allow_html=True)
+    # ------------------ RISK & ANOMALY ANALYSIS SECTION ------------------
+    if not df_risk_hourly.empty:
+        st.markdown("<div class='section-header'>📈 Hourly Risk Index & Statistical Spike Detection</div>", unsafe_allow_html=True)
         
-        # Color coding for hotspots on Pydeck map
+        # Merge risk chart with anomaly status markers
+        base_line = alt.Chart(df_risk_hourly).mark_line(color='#F59E0B', size=3).encode(
+            x=alt.X('Hour:Q', title='Hour of the Day', scale=alt.Scale(domain=[0, 23])),
+            y=alt.Y('total_risk_score:Q', title='Total Weighted Risk Points'),
+            tooltip=['Hour', 'violation_count', 'total_risk_score', 'anomaly_level', 'primary_violation']
+        )
+        
+        points = alt.Chart(df_risk_hourly).mark_circle(size=80).encode(
+            x='Hour:Q',
+            y='total_risk_score:Q',
+            color=alt.Color('anomaly_level:N', scale=alt.Scale(
+                domain=['CRITICAL SPIKE', 'ELEVATED SURGE', 'NORMAL', 'UNUSUALLY LOW'],
+                range=['#EF4444', '#F59E0B', '#10B981', '#64748B']
+            ), title='Status'),
+            tooltip=['Hour', 'violation_count', 'total_risk_score', 'z_score', 'anomaly_level', 'primary_violation']
+        )
+        
+        risk_chart = (base_line + points).properties(height=260).configure_axis(
+            gridColor='rgba(255, 255, 255, 0.06)', labelColor='#94A3B8', titleColor='#94A3B8', domain=False
+        ).configure_view(strokeWidth=0)
+        
+        st.altair_chart(risk_chart, use_container_width=True)
+
+    # ------------------ GEOSPATIAL MAP & CATEGORY BREAKDOWN ------------------
+    col_m1, col_m2 = st.columns([1.3, 0.7])
+    
+    with col_m1:
+        st.markdown("<div class='section-header'>🗺️ Spatial Hotspot Intelligence (ML KMeans & Density)</div>", unsafe_allow_html=True)
+        
+        map_mode = st.radio(
+            "Visualization Mode:",
+            ["KMeans Clustered Hotspots", "3D Hexagon Density Grid"],
+            horizontal=True
+        )
+        
         cluster_colors = {
-            0: [239, 68, 68, 160],   # Red
-            1: [59, 130, 246, 160],  # Blue
-            2: [16, 185, 129, 160],  # Green
-            3: [245, 158, 11, 160],  # Yellow
-            4: [139, 92, 246, 160]   # Purple
+            0: [239, 68, 68, 170],   # Red
+            1: [59, 130, 246, 170],  # Blue
+            2: [16, 185, 129, 170],  # Green
+            3: [245, 158, 11, 170],  # Yellow
+            4: [139, 92, 246, 170]   # Purple
         }
         
         df_clusters['color'] = df_clusters['prediction'].map(cluster_colors)
         
-        # Build Pydeck Scatterplot Layer
-        layer = pdk.Layer(
-            "ScatterplotLayer",
-            df_clusters,
-            get_position="[lon, lat]",
-            get_color="color",
-            get_radius=110,
-            pickable=True,
-        )
-        
-        # Define viewport
         view_state = pdk.ViewState(
-            latitude=df_clusters['lat'].mean(),
-            longitude=df_clusters['lon'].mean(),
-            zoom=11.5,
-            pitch=40,
+            latitude=float(df_clusters['lat'].mean()),
+            longitude=float(df_clusters['lon'].mean()),
+            zoom=11.6,
+            pitch=45,
+            bearing=15
         )
         
-        # Pydeck Deck
-        deck = pdk.Deck(
-            map_style="mapbox://styles/mapbox/dark-v9",
-            initial_view_state=view_state,
-            layers=[layer],
-            tooltip={"text": "Violation ID: {violation_id}\nCluster: {prediction}"}
-        )
-        
+        layers = []
+        if map_mode == "KMeans Clustered Hotspots":
+            # Clustered points layer
+            scatter_layer = pdk.Layer(
+                "ScatterplotLayer",
+                df_clusters,
+                get_position="[lon, lat]",
+                get_color="color",
+                get_radius=110,
+                pickable=True,
+            )
+            layers.append(scatter_layer)
+            
+            # Centroid overlay layer
+            if not df_centroids.empty:
+                centroid_layer = pdk.Layer(
+                    "ScatterplotLayer",
+                    df_centroids,
+                    get_position="[center_lon, center_lat]",
+                    get_color="[255, 255, 255, 220]",
+                    get_radius=220,
+                    pickable=True,
+                )
+                layers.append(centroid_layer)
+                
+            deck = pdk.Deck(
+                map_style="mapbox://styles/mapbox/dark-v9",
+                initial_view_state=view_state,
+                layers=layers,
+                tooltip={"text": "Violation ID: {violation_id}\nCluster: {prediction}\nInfraction: {violation_type}"}
+            )
+        else:
+            # 3D Hexagon density layer
+            hex_layer = pdk.Layer(
+                "HexagonLayer",
+                df_clusters,
+                get_position="[lon, lat]",
+                radius=140,
+                elevation_scale=8,
+                elevation_range=[0, 1000],
+                extruded=True,
+                coverage=1,
+                pickable=True,
+            )
+            layers.append(hex_layer)
+            deck = pdk.Deck(
+                map_style="mapbox://styles/mapbox/dark-v9",
+                initial_view_state=view_state,
+                layers=layers,
+                tooltip={"text": "Violations in Grid: {elevationValue}"}
+            )
+            
         st.pydeck_chart(deck)
         
-        # Legend
-        st.markdown("""
-        <div style="display:flex; gap:1.5rem; justify-content:center; padding-top:0.5rem; font-size:0.85rem; color:#94A3B8;">
-            <div><span style="color:#EF4444; font-size:1.1rem;">■</span> Cluster 0</div>
-            <div><span style="color:#3B82F6; font-size:1.1rem;">■</span> Cluster 1</div>
-            <div><span style="color:#10B981; font-size:1.1rem;">■</span> Cluster 2</div>
-            <div><span style="color:#F59E0B; font-size:1.1rem;">■</span> Cluster 3</div>
-            <div><span style="color:#8B5CF6; font-size:1.1rem;">■</span> Cluster 4</div>
-        </div>
-        """, unsafe_allow_html=True)
+        if map_mode == "KMeans Clustered Hotspots" and not df_centroids.empty:
+            st.markdown("**Cluster Centroids Summary:**")
+            st.dataframe(
+                df_centroids.rename(columns={
+                    'cluster_id': 'Cluster ID',
+                    'center_lat': 'Center Lat',
+                    'center_lon': 'Center Lon',
+                    'violation_count': 'Total Violations',
+                    'dominant_violation': 'Dominant Infraction'
+                }),
+                use_container_width=True,
+                hide_index=True
+            )
         
-    with layout_cols2[1]:
+    with col_m2:
         st.markdown("<div class='section-header'>📊 Violations by Category</div>", unsafe_allow_html=True)
         if len(df_time_filtered) > 0:
             type_data = df_time_filtered.groupby('Violation_Type')['count'].sum().reset_index()
             type_data = type_data.sort_values(by='count', ascending=True)
             
-            # Horizontal Bar Chart
             type_chart = alt.Chart(type_data).mark_bar(
                 color='#F43F5E',
                 cornerRadiusBottomRight=4,
@@ -370,23 +484,53 @@ if data_loaded:
                 x=alt.X('count:Q', title='Violation Count'),
                 y=alt.Y('Violation_Type:N', title='', sort='-x'),
                 tooltip=['Violation_Type', 'count']
-            ).properties(
-                height=350
-            ).configure_axis(
-                gridColor='rgba(255, 255, 255, 0.05)',
-                labelColor='#94A3B8',
-                titleColor='#94A3B8',
-                domain=False
-            ).configure_view(
-                strokeWidth=0
-            )
+            ).properties(height=320).configure_axis(
+                gridColor='rgba(255, 255, 255, 0.06)', labelColor='#94A3B8', titleColor='#94A3B8', domain=False
+            ).configure_view(strokeWidth=0)
+            
             st.altair_chart(type_chart, use_container_width=True)
         else:
-            st.info("No data available.")
+            st.info("No category data.")
 
-    # ------------------ RECENT LOGS ------------------
-    st.markdown("<div class='section-header'>📋 Sample Violation Record Ingestion logs</div>", unsafe_allow_html=True)
-    df_raw_logs = df_clusters[['violation_id', 'lat', 'lon', 'prediction']].rename(
-        columns={'prediction': 'cluster_id'}
-    ).head(10)
-    st.dataframe(df_raw_logs, use_container_width=True)
+    # ------------------ CROSS-TABULATION MATRIX ------------------
+    if not df_matrix.empty and len(df_time_filtered) > 0:
+        st.markdown("<div class='section-header'>🔥 Temporal-Categorical Intensity Matrix</div>", unsafe_allow_html=True)
+        
+        matrix_chart = alt.Chart(df_matrix).mark_rect().encode(
+            x=alt.X('Hour:O', title='Hour of Day (00:00 - 23:00)'),
+            y=alt.Y('violation_type:N', title='Violation Category'),
+            color=alt.Color('violation_count:Q', scale=alt.Scale(scheme='viridis'), title='Frequency'),
+            tooltip=['Hour', 'violation_type', 'violation_count', 'total_risk_score']
+        ).properties(height=260).configure_axis(
+            labelColor='#94A3B8', titleColor='#94A3B8'
+        ).configure_view(strokeWidth=0)
+        
+        st.altair_chart(matrix_chart, use_container_width=True)
+
+    # ------------------ EXPORT & RECENT LOGS SECTION ------------------
+    st.markdown("<div class='section-header'>📋 High-Risk Corridors & Data Export</div>", unsafe_allow_html=True)
+    
+    col_exp1, col_exp2 = st.columns([1.2, 0.8])
+    with col_exp1:
+        st.dataframe(df_locations.head(10), use_container_width=True)
+        
+    with col_exp2:
+        st.markdown("**Download Authority Reports:**")
+        csv_data = df_time_filtered.to_csv(index=False).encode('utf-8')
+        st.download_button(
+            label="📥 Export Filtered Analytics (CSV)",
+            data=csv_data,
+            file_name="traffic_violation_analytics.csv",
+            mime="text/csv",
+            use_container_width=True
+        )
+        
+        if not df_risk_hourly.empty:
+            risk_csv = df_risk_hourly.to_csv(index=False).encode('utf-8')
+            st.download_button(
+                label="📥 Export Risk & Anomaly Audit (CSV)",
+                data=risk_csv,
+                file_name="risk_and_anomaly_audit.csv",
+                mime="text/csv",
+                use_container_width=True
+            )

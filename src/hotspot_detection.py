@@ -121,8 +121,29 @@ def run_pandas(inp_path, output_dir):
         except: pass
         
     output_cols = ['violation_id', 'lat', 'lon', 'prediction']
+    if 'violation_type' in geo_df.columns:
+        output_cols.append('violation_type')
     geo_df[output_cols].to_csv(os.path.join(clusters_dir, "part-0.csv"), index=False)
-    print(f"[SUCCESS] [Pandas] Hotspot detection completed! Output saved in {output_dir}")
+
+    # Compute and save cluster centroids summary
+    centroid_list = []
+    for c_id, group in geo_df.groupby('prediction'):
+        top_v = group['violation_type'].mode()[0] if ('violation_type' in group.columns and len(group['violation_type'].mode()) > 0) else 'General'
+        centroid_list.append({
+            'cluster_id': int(c_id),
+            'center_lat': round(float(group['lat'].mean()), 6),
+            'center_lon': round(float(group['lon'].mean()), 6),
+            'violation_count': len(group),
+            'dominant_violation': top_v
+        })
+    centroids_df = pd.DataFrame(centroid_list)
+    centroids_dir = os.path.join(output_dir, "cluster_centroids_csv")
+    os.makedirs(centroids_dir, exist_ok=True)
+    for f in os.listdir(centroids_dir):
+        try: os.remove(os.path.join(centroids_dir, f))
+        except: pass
+    centroids_df.to_csv(os.path.join(centroids_dir, "part-0.csv"), index=False)
+    print(f"[SUCCESS] [Pandas] Hotspot detection and centroids completed! Output saved in {output_dir}")
 
 def main():
     BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -132,6 +153,10 @@ def main():
     if not os.path.exists(INP):
         print(f"Error: Cleaned input Parquet path {INP} not found.")
         sys.exit(1)
+        
+    if os.environ.get("TRAFFIC_ENGINE", "").lower() == "pandas":
+        run_pandas(INP, OUTDIR)
+        return
         
     try:
         run_spark(INP, OUTDIR)

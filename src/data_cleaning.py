@@ -69,6 +69,10 @@ def main():
         print(f"Error: Input file {input_path} not found. Please run src/generate_mock_data.py first.")
         sys.exit(1)
         
+    if os.environ.get("TRAFFIC_ENGINE", "").lower() == "pandas":
+        clean_data_pandas(input_path, output_dir)
+        return
+        
     try:
         clean_data_spark(input_path, output_dir)
     except Exception as e:

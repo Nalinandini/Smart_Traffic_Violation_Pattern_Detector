@@ -81,6 +81,10 @@ def main():
         print(f"Error: Input file {input_path} not found.")
         sys.exit(1)
         
+    if os.environ.get("TRAFFIC_ENGINE", "").lower() == "pandas":
+        run_pandas(input_path, output_path)
+        return
+        
     try:
         run_spark(input_path, output_path)
     except Exception as e:
