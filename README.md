@@ -98,8 +98,23 @@ python run_pipeline.py --generate-data
 python run_pipeline.py --engine spark
 ```
 
-### 6.4 Launch the Streamlit Dashboard
+### 6.4 Launch the Modern Web Frontend (Landing Page & Control Center)
+Run the lightweight, Vercel-ready web server:
 ```bash
-streamlit run dashboard/streamlit_dashboard.py
+python app.py
 ```
-Open your browser at `http://localhost:8501` to access the Control Center.
+Open your browser at **`http://localhost:3000`** to access:
+- **Hero Landing Page** with live telemetry counters, architecture overview, and alert banners.
+- **Interactive Dashboard** with real-time KPI cards, dynamic violation and day filters, and interactive Chart.js visualizations.
+- **Geospatial Hotspot Map** powered by Leaflet with Carto Dark tiles, KMeans centroids, and 250+ incident pins.
+- **High-Risk Corridors & 24h Statistical Anomaly Audit Log**.
+- **Interactive REST API Explorer** (`/api/summary`, `/api/hotspots`, `/api/hourly`, `/api/corridors`).
+
+---
+
+### 6.5 Launch the Streamlit Analytical Dashboard
+To run the secondary Pydeck/Altair Streamlit application:
+```bash
+python -m streamlit run dashboard/streamlit_dashboard.py
+```
+Open your browser at **`http://localhost:8501`** to access the Streamlit Control Center.

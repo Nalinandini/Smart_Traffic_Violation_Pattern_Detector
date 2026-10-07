@@ -114,12 +114,12 @@ def load_csv_output(path):
     if os.path.isfile(path):
         return pd.read_csv(path)
     elif os.path.isdir(path):
-        csv_files = [f for f in os.listdir(path) if f.startswith('part-') and f.endswith('.csv')]
+        csv_files = [f for f in sorted(os.listdir(path)) if f.startswith('part-') and f.endswith('.csv')]
         if csv_files:
-            return pd.read_csv(os.path.join(path, csv_files[0]))
-        csv_files = [f for f in os.listdir(path) if f.endswith('.csv')]
+            return pd.concat([pd.read_csv(os.path.join(path, f)) for f in csv_files], ignore_index=True)
+        csv_files = [f for f in sorted(os.listdir(path)) if f.endswith('.csv')]
         if csv_files:
-            return pd.read_csv(os.path.join(path, csv_files[0]))
+            return pd.concat([pd.read_csv(os.path.join(path, f)) for f in csv_files], ignore_index=True)
     raise FileNotFoundError(f"Could not locate CSV output at {path}")
 
 def load_parquet_output(path):
@@ -428,7 +428,7 @@ if data_loaded:
                 layers.append(centroid_layer)
                 
             deck = pdk.Deck(
-                map_style="mapbox://styles/mapbox/dark-v9",
+                map_style="dark",
                 initial_view_state=view_state,
                 layers=layers,
                 tooltip={"text": "Violation ID: {violation_id}\nCluster: {prediction}\nInfraction: {violation_type}"}
@@ -448,7 +448,7 @@ if data_loaded:
             )
             layers.append(hex_layer)
             deck = pdk.Deck(
-                map_style="mapbox://styles/mapbox/dark-v9",
+                map_style="dark",
                 initial_view_state=view_state,
                 layers=layers,
                 tooltip={"text": "Violations in Grid: {elevationValue}"}

@@ -1,0 +1,7183 @@
+{
+  "summary": {
+    "total_violations": 1500,
+    "rush_hour_spike": "16:00",
+    "z_score_spike": 2.21,
+    "cluster_count": 5,
+    "monitored_corridors": 41,
+    "avg_severity": 7.4
+  },
+  "hourly_risk": [
+    {
+      "Hour": "0",
+      "violation_count": "8",
+      "total_risk_score": "50",
+      "avg_risk_score": "6.25",
+      "primary_violation": "Red Light Violation",
+      "z_score": "-1.09",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "1",
+      "violation_count": "8",
+      "total_risk_score": "49",
+      "avg_risk_score": "6.125",
+      "primary_violation": "DUI",
+      "z_score": "-1.09",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "2",
+      "violation_count": "9",
+      "total_risk_score": "52",
+      "avg_risk_score": "5.777777777777778",
+      "primary_violation": "Using Mobile Phone",
+      "z_score": "-1.07",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "3",
+      "violation_count": "6",
+      "total_risk_score": "25",
+      "avg_risk_score": "4.166666666666667",
+      "primary_violation": "Illegal Turn",
+      "z_score": "-1.13",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "4",
+      "violation_count": "10",
+      "total_risk_score": "67",
+      "avg_risk_score": "6.7",
+      "primary_violation": "Reckless Driving",
+      "z_score": "-1.05",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "5",
+      "violation_count": "10",
+      "total_risk_score": "65",
+      "avg_risk_score": "6.5",
+      "primary_violation": "Reckless Driving",
+      "z_score": "-1.05",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "6",
+      "violation_count": "30",
+      "total_risk_score": "177",
+      "avg_risk_score": "5.9",
+      "primary_violation": "Red Light Violation",
+      "z_score": "-0.65",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "7",
+      "violation_count": "84",
+      "total_risk_score": "514",
+      "avg_risk_score": "6.119047619047619",
+      "primary_violation": "Red Light Violation",
+      "z_score": "0.43",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "8",
+      "violation_count": "145",
+      "total_risk_score": "920",
+      "avg_risk_score": "6.344827586206897",
+      "primary_violation": "Speeding",
+      "z_score": "1.65",
+      "anomaly_level": "ELEVATED SURGE",
+      "is_anomaly": "True"
+    },
+    {
+      "Hour": "9",
+      "violation_count": "105",
+      "total_risk_score": "608",
+      "avg_risk_score": "5.79047619047619",
+      "primary_violation": "Reckless Driving",
+      "z_score": "0.85",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "10",
+      "violation_count": "76",
+      "total_risk_score": "420",
+      "avg_risk_score": "5.526315789473684",
+      "primary_violation": "Illegal Turn",
+      "z_score": "0.27",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "11",
+      "violation_count": "77",
+      "total_risk_score": "444",
+      "avg_risk_score": "5.766233766233766",
+      "primary_violation": "Reckless Driving",
+      "z_score": "0.29",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "12",
+      "violation_count": "76",
+      "total_risk_score": "430",
+      "avg_risk_score": "5.657894736842105",
+      "primary_violation": "Illegal Turn",
+      "z_score": "0.27",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "13",
+      "violation_count": "88",
+      "total_risk_score": "491",
+      "avg_risk_score": "5.579545454545454",
+      "primary_violation": "Speeding",
+      "z_score": "0.51",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "14",
+      "violation_count": "85",
+      "total_risk_score": "533",
+      "avg_risk_score": "6.270588235294118",
+      "primary_violation": "DUI",
+      "z_score": "0.45",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "15",
+      "violation_count": "128",
+      "total_risk_score": "746",
+      "avg_risk_score": "5.828125",
+      "primary_violation": "Speeding",
+      "z_score": "1.31",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "16",
+      "violation_count": "173",
+      "total_risk_score": "968",
+      "avg_risk_score": "5.595375722543353",
+      "primary_violation": "Using Mobile Phone",
+      "z_score": "2.21",
+      "anomaly_level": "CRITICAL SPIKE",
+      "is_anomaly": "True"
+    },
+    {
+      "Hour": "17",
+      "violation_count": "125",
+      "total_risk_score": "717",
+      "avg_risk_score": "5.736",
+      "primary_violation": "Reckless Driving",
+      "z_score": "1.25",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "18",
+      "violation_count": "102",
+      "total_risk_score": "586",
+      "avg_risk_score": "5.745098039215686",
+      "primary_violation": "Using Mobile Phone",
+      "z_score": "0.79",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "19",
+      "violation_count": "58",
+      "total_risk_score": "310",
+      "avg_risk_score": "5.344827586206897",
+      "primary_violation": "Illegal Turn",
+      "z_score": "-0.09",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "20",
+      "violation_count": "35",
+      "total_risk_score": "197",
+      "avg_risk_score": "5.628571428571429",
+      "primary_violation": "Red Light Violation",
+      "z_score": "-0.55",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "21",
+      "violation_count": "34",
+      "total_risk_score": "145",
+      "avg_risk_score": "4.264705882352941",
+      "primary_violation": "Seatbelt Violation",
+      "z_score": "-0.57",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "22",
+      "violation_count": "19",
+      "total_risk_score": "102",
+      "avg_risk_score": "5.368421052631579",
+      "primary_violation": "Speeding",
+      "z_score": "-0.87",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    },
+    {
+      "Hour": "23",
+      "violation_count": "9",
+      "total_risk_score": "52",
+      "avg_risk_score": "5.777777777777778",
+      "primary_violation": "Red Light Violation",
+      "z_score": "-1.07",
+      "anomaly_level": "NORMAL",
+      "is_anomaly": "False"
+    }
+  ],
+  "cluster_centroids": [
+    {
+      "cluster_id": "0",
+      "center_lat": "40.757753",
+      "center_lon": "-73.984631",
+      "violation_count": "322",
+      "dominant_violation": "Reckless Driving"
+    },
+    {
+      "cluster_id": "1",
+      "center_lat": "40.729582",
+      "center_lon": "-73.996567",
+      "violation_count": "318",
+      "dominant_violation": "DUI"
+    },
+    {
+      "cluster_id": "2",
+      "center_lat": "40.807649",
+      "center_lon": "-73.962706",
+      "violation_count": "293",
+      "dominant_violation": "Illegal Turn"
+    },
+    {
+      "cluster_id": "3",
+      "center_lat": "40.706475",
+      "center_lon": "-74.008255",
+      "violation_count": "297",
+      "dominant_violation": "Red Light Violation"
+    },
+    {
+      "cluster_id": "4",
+      "center_lat": "40.746807",
+      "center_lon": "-73.986522",
+      "violation_count": "270",
+      "dominant_violation": "DUI"
+    }
+  ],
+  "hotspot_samples": [
+    {
+      "violation_id": "V0001",
+      "lat": "40.734041",
+      "lon": "-73.995698",
+      "prediction": "1",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0002",
+      "lat": "40.800122",
+      "lon": "-73.962106",
+      "prediction": "2",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0003",
+      "lat": "40.732076",
+      "lon": "-73.998045",
+      "prediction": "1",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0004",
+      "lat": "40.762249",
+      "lon": "-73.97897",
+      "prediction": "0",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0005",
+      "lat": "40.750646",
+      "lon": "-73.990746",
+      "prediction": "4",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0006",
+      "lat": "40.756119",
+      "lon": "-73.982077",
+      "prediction": "0",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0007",
+      "lat": "40.759129",
+      "lon": "-73.983151",
+      "prediction": "0",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0008",
+      "lat": "40.803941",
+      "lon": "-73.963508",
+      "prediction": "2",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0009",
+      "lat": "40.731706",
+      "lon": "-73.989929",
+      "prediction": "1",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0010",
+      "lat": "40.752107",
+      "lon": "-73.984577",
+      "prediction": "0",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0011",
+      "lat": "40.754455",
+      "lon": "-73.981664",
+      "prediction": "0",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0012",
+      "lat": "40.813448",
+      "lon": "-73.962167",
+      "prediction": "2",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0013",
+      "lat": "40.710664",
+      "lon": "-74.01781",
+      "prediction": "3",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0014",
+      "lat": "40.753288",
+      "lon": "-73.980611",
+      "prediction": "0",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0015",
+      "lat": "40.746647",
+      "lon": "-73.992614",
+      "prediction": "4",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0016",
+      "lat": "40.723419",
+      "lon": "-73.990826",
+      "prediction": "1",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0017",
+      "lat": "40.806947",
+      "lon": "-73.961476",
+      "prediction": "2",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0018",
+      "lat": "40.753169",
+      "lon": "-73.983655",
+      "prediction": "0",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0019",
+      "lat": "40.701917",
+      "lon": "-74.00968",
+      "prediction": "3",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0020",
+      "lat": "40.752234",
+      "lon": "-73.995465",
+      "prediction": "4",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0021",
+      "lat": "40.701048",
+      "lon": "-74.018715",
+      "prediction": "3",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0022",
+      "lat": "40.723935",
+      "lon": "-74.000599",
+      "prediction": "1",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0023",
+      "lat": "40.700029",
+      "lon": "-73.999673",
+      "prediction": "3",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0024",
+      "lat": "40.730936",
+      "lon": "-74.005635",
+      "prediction": "1",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0025",
+      "lat": "40.803076",
+      "lon": "-73.96009",
+      "prediction": "2",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0026",
+      "lat": "40.80963",
+      "lon": "-73.964264",
+      "prediction": "2",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0027",
+      "lat": "40.74469",
+      "lon": "-73.983596",
+      "prediction": "4",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0028",
+      "lat": "40.708478",
+      "lon": "-74.016221",
+      "prediction": "3",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0029",
+      "lat": "40.728171",
+      "lon": "-73.986844",
+      "prediction": "1",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0030",
+      "lat": "40.761233",
+      "lon": "-73.98109",
+      "prediction": "0",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0031",
+      "lat": "40.751584",
+      "lon": "-73.992651",
+      "prediction": "4",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0032",
+      "lat": "40.751933",
+      "lon": "-73.979091",
+      "prediction": "0",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0033",
+      "lat": "40.706688",
+      "lon": "-74.011307",
+      "prediction": "3",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0034",
+      "lat": "40.762332",
+      "lon": "-73.987895",
+      "prediction": "0",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0035",
+      "lat": "40.734285",
+      "lon": "-74.001213",
+      "prediction": "1",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0036",
+      "lat": "40.720093",
+      "lon": "-73.992544",
+      "prediction": "1",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0037",
+      "lat": "40.722509",
+      "lon": "-73.997707",
+      "prediction": "1",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0038",
+      "lat": "40.812612",
+      "lon": "-73.964856",
+      "prediction": "2",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0039",
+      "lat": "40.811731",
+      "lon": "-73.96953",
+      "prediction": "2",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0040",
+      "lat": "40.728248",
+      "lon": "-73.994397",
+      "prediction": "1",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0041",
+      "lat": "40.804735",
+      "lon": "-73.963789",
+      "prediction": "2",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0042",
+      "lat": "40.730917",
+      "lon": "-73.999706",
+      "prediction": "1",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0043",
+      "lat": "40.709182",
+      "lon": "-74.002867",
+      "prediction": "3",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0044",
+      "lat": "40.768975",
+      "lon": "-73.983588",
+      "prediction": "0",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0045",
+      "lat": "40.805518",
+      "lon": "-73.971232",
+      "prediction": "2",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0046",
+      "lat": "40.745689",
+      "lon": "-73.982362",
+      "prediction": "4",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0047",
+      "lat": "40.737278",
+      "lon": "-73.993058",
+      "prediction": "1",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0048",
+      "lat": "40.733478",
+      "lon": "-73.999244",
+      "prediction": "1",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0049",
+      "lat": "40.727404",
+      "lon": "-73.999024",
+      "prediction": "1",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0050",
+      "lat": "40.728316",
+      "lon": "-74.000693",
+      "prediction": "1",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0051",
+      "lat": "40.701982",
+      "lon": "-74.001105",
+      "prediction": "3",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0052",
+      "lat": "40.703349",
+      "lon": "-74.007803",
+      "prediction": "3",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0053",
+      "lat": "40.755121",
+      "lon": "-73.976228",
+      "prediction": "0",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0054",
+      "lat": "40.766553",
+      "lon": "-73.983974",
+      "prediction": "0",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0055",
+      "lat": "40.747085",
+      "lon": "-73.99192",
+      "prediction": "4",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0056",
+      "lat": "40.756985",
+      "lon": "-73.98804",
+      "prediction": "0",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0057",
+      "lat": "40.759367",
+      "lon": "-73.985756",
+      "prediction": "0",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0058",
+      "lat": "40.741145",
+      "lon": "-73.983298",
+      "prediction": "4",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0059",
+      "lat": "40.766672",
+      "lon": "-73.979897",
+      "prediction": "0",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0060",
+      "lat": "40.737019",
+      "lon": "-73.992786",
+      "prediction": "1",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0061",
+      "lat": "40.741192",
+      "lon": "-73.985848",
+      "prediction": "4",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0062",
+      "lat": "40.727421",
+      "lon": "-73.99103",
+      "prediction": "1",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0063",
+      "lat": "40.712956",
+      "lon": "-74.01082",
+      "prediction": "3",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0064",
+      "lat": "40.707906",
+      "lon": "-74.011575",
+      "prediction": "3",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0065",
+      "lat": "40.736957",
+      "lon": "-73.983316",
+      "prediction": "4",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0066",
+      "lat": "40.705695",
+      "lon": "-74.004183",
+      "prediction": "3",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0067",
+      "lat": "40.728416",
+      "lon": "-73.994271",
+      "prediction": "1",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0068",
+      "lat": "40.746073",
+      "lon": "-73.987856",
+      "prediction": "4",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0069",
+      "lat": "40.719378",
+      "lon": "-74.001171",
+      "prediction": "1",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0070",
+      "lat": "40.726765",
+      "lon": "-74.002309",
+      "prediction": "1",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0071",
+      "lat": "40.734284",
+      "lon": "-74.000049",
+      "prediction": "1",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0072",
+      "lat": "40.705933",
+      "lon": "-74.006915",
+      "prediction": "3",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0073",
+      "lat": "40.758853",
+      "lon": "-73.983339",
+      "prediction": "0",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0074",
+      "lat": "40.743995",
+      "lon": "-73.982082",
+      "prediction": "4",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0075",
+      "lat": "40.754439",
+      "lon": "-73.986545",
+      "prediction": "0",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0076",
+      "lat": "40.701302",
+      "lon": "-74.018474",
+      "prediction": "3",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0077",
+      "lat": "40.759085",
+      "lon": "-73.992074",
+      "prediction": "0",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0078",
+      "lat": "40.748408",
+      "lon": "-73.98656",
+      "prediction": "4",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0079",
+      "lat": "40.808263",
+      "lon": "-73.949883",
+      "prediction": "2",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0080",
+      "lat": "40.822985",
+      "lon": "-73.969189",
+      "prediction": "2",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0081",
+      "lat": "40.701765",
+      "lon": "-74.004221",
+      "prediction": "3",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0082",
+      "lat": "40.805098",
+      "lon": "-73.956711",
+      "prediction": "2",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0083",
+      "lat": "40.710582",
+      "lon": "-74.014441",
+      "prediction": "3",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0084",
+      "lat": "40.766846",
+      "lon": "-73.986518",
+      "prediction": "0",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0085",
+      "lat": "40.729451",
+      "lon": "-73.996395",
+      "prediction": "1",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0086",
+      "lat": "40.803734",
+      "lon": "-73.95924",
+      "prediction": "2",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0087",
+      "lat": "40.69963",
+      "lon": "-73.99687",
+      "prediction": "3",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0088",
+      "lat": "40.706605",
+      "lon": "-74.007825",
+      "prediction": "3",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0089",
+      "lat": "40.730304",
+      "lon": "-73.989379",
+      "prediction": "1",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0090",
+      "lat": "40.729458",
+      "lon": "-73.996452",
+      "prediction": "1",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0091",
+      "lat": "40.810786",
+      "lon": "-73.960845",
+      "prediction": "2",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0092",
+      "lat": "40.805994",
+      "lon": "-73.954802",
+      "prediction": "2",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0093",
+      "lat": "40.747772",
+      "lon": "-73.976696",
+      "prediction": "4",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0094",
+      "lat": "40.756404",
+      "lon": "-73.987632",
+      "prediction": "0",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0095",
+      "lat": "40.737864",
+      "lon": "-74.002181",
+      "prediction": "1",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0096",
+      "lat": "40.700845",
+      "lon": "-74.012012",
+      "prediction": "3",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0097",
+      "lat": "40.744207",
+      "lon": "-73.985889",
+      "prediction": "4",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0098",
+      "lat": "40.753544",
+      "lon": "-73.979258",
+      "prediction": "0",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0099",
+      "lat": "40.751472",
+      "lon": "-73.982384",
+      "prediction": "4",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0100",
+      "lat": "40.740888",
+      "lon": "-73.994684",
+      "prediction": "4",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0101",
+      "lat": "40.763219",
+      "lon": "-73.986407",
+      "prediction": "0",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0102",
+      "lat": "40.752215",
+      "lon": "-73.980325",
+      "prediction": "0",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0103",
+      "lat": "40.757706",
+      "lon": "-73.982685",
+      "prediction": "0",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0104",
+      "lat": "40.802",
+      "lon": "-73.963785",
+      "prediction": "2",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0105",
+      "lat": "40.744015",
+      "lon": "-73.979484",
+      "prediction": "4",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0106",
+      "lat": "40.749849",
+      "lon": "-73.990619",
+      "prediction": "4",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0107",
+      "lat": "40.804808",
+      "lon": "-73.967665",
+      "prediction": "2",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0108",
+      "lat": "40.760085",
+      "lon": "-73.986121",
+      "prediction": "0",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0109",
+      "lat": "40.743194",
+      "lon": "-73.982639",
+      "prediction": "4",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0110",
+      "lat": "40.745884",
+      "lon": "-73.985105",
+      "prediction": "4",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0111",
+      "lat": "40.727775",
+      "lon": "-73.992906",
+      "prediction": "1",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0112",
+      "lat": "40.753079",
+      "lon": "-73.979483",
+      "prediction": "0",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0113",
+      "lat": "40.70698",
+      "lon": "-74.009718",
+      "prediction": "3",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0114",
+      "lat": "40.814078",
+      "lon": "-73.972604",
+      "prediction": "2",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0115",
+      "lat": "40.757076",
+      "lon": "-73.984506",
+      "prediction": "0",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0116",
+      "lat": "40.745863",
+      "lon": "-73.989258",
+      "prediction": "4",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0117",
+      "lat": "40.809913",
+      "lon": "-73.963139",
+      "prediction": "2",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0118",
+      "lat": "40.755661",
+      "lon": "-73.982452",
+      "prediction": "0",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0119",
+      "lat": "40.754428",
+      "lon": "-73.984008",
+      "prediction": "0",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0120",
+      "lat": "40.703085",
+      "lon": "-74.015978",
+      "prediction": "3",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0121",
+      "lat": "40.743821",
+      "lon": "-73.989814",
+      "prediction": "4",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0122",
+      "lat": "40.811358",
+      "lon": "-73.971821",
+      "prediction": "2",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0123",
+      "lat": "40.730449",
+      "lon": "-74.004874",
+      "prediction": "1",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0124",
+      "lat": "40.705628",
+      "lon": "-74.011191",
+      "prediction": "3",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0125",
+      "lat": "40.721811",
+      "lon": "-73.99445",
+      "prediction": "1",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0126",
+      "lat": "40.743397",
+      "lon": "-73.987194",
+      "prediction": "4",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0127",
+      "lat": "40.741952",
+      "lon": "-73.984841",
+      "prediction": "4",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0128",
+      "lat": "40.746348",
+      "lon": "-73.985739",
+      "prediction": "4",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0129",
+      "lat": "40.809023",
+      "lon": "-73.959514",
+      "prediction": "2",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0130",
+      "lat": "40.806397",
+      "lon": "-73.964704",
+      "prediction": "2",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0131",
+      "lat": "40.756704",
+      "lon": "-73.987564",
+      "prediction": "0",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0132",
+      "lat": "40.795767",
+      "lon": "-73.961136",
+      "prediction": "2",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0133",
+      "lat": "40.735979",
+      "lon": "-73.996706",
+      "prediction": "1",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0134",
+      "lat": "40.804685",
+      "lon": "-73.963323",
+      "prediction": "2",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0135",
+      "lat": "40.755033",
+      "lon": "-73.977584",
+      "prediction": "0",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0136",
+      "lat": "40.755733",
+      "lon": "-73.98358",
+      "prediction": "0",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0137",
+      "lat": "40.749704",
+      "lon": "-73.985171",
+      "prediction": "4",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0138",
+      "lat": "40.750019",
+      "lon": "-73.984013",
+      "prediction": "4",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0139",
+      "lat": "40.753988",
+      "lon": "-73.989126",
+      "prediction": "0",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0140",
+      "lat": "40.695169",
+      "lon": "-74.016876",
+      "prediction": "3",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0141",
+      "lat": "40.807574",
+      "lon": "-73.968405",
+      "prediction": "2",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0142",
+      "lat": "40.742408",
+      "lon": "-73.990778",
+      "prediction": "4",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0143",
+      "lat": "40.731484",
+      "lon": "-74.000651",
+      "prediction": "1",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0144",
+      "lat": "40.703101",
+      "lon": "-74.004501",
+      "prediction": "3",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0145",
+      "lat": "40.753199",
+      "lon": "-73.986533",
+      "prediction": "0",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0146",
+      "lat": "40.76762",
+      "lon": "-73.984979",
+      "prediction": "0",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0147",
+      "lat": "40.724123",
+      "lon": "-73.991578",
+      "prediction": "1",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0148",
+      "lat": "40.756581",
+      "lon": "-73.986563",
+      "prediction": "0",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0149",
+      "lat": "40.751298",
+      "lon": "-73.996438",
+      "prediction": "4",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0150",
+      "lat": "40.71661",
+      "lon": "-74.007181",
+      "prediction": "3",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0151",
+      "lat": "40.726163",
+      "lon": "-73.996914",
+      "prediction": "1",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0152",
+      "lat": "40.809787",
+      "lon": "-73.965541",
+      "prediction": "2",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0153",
+      "lat": "40.76653",
+      "lon": "-73.98051",
+      "prediction": "0",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0154",
+      "lat": "40.701115",
+      "lon": "-74.003985",
+      "prediction": "3",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0155",
+      "lat": "40.803623",
+      "lon": "-73.953613",
+      "prediction": "2",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0156",
+      "lat": "40.755707",
+      "lon": "-73.990229",
+      "prediction": "0",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0157",
+      "lat": "40.742802",
+      "lon": "-73.981003",
+      "prediction": "4",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0158",
+      "lat": "40.711619",
+      "lon": "-74.000734",
+      "prediction": "3",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0159",
+      "lat": "40.760115",
+      "lon": "-73.980553",
+      "prediction": "0",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0160",
+      "lat": "40.744223",
+      "lon": "-73.987743",
+      "prediction": "4",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0161",
+      "lat": "40.797444",
+      "lon": "-73.968495",
+      "prediction": "2",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0162",
+      "lat": "40.810219",
+      "lon": "-73.966796",
+      "prediction": "2",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0163",
+      "lat": "40.802096",
+      "lon": "-73.96459",
+      "prediction": "2",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0164",
+      "lat": "40.75011",
+      "lon": "-73.985713",
+      "prediction": "4",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0165",
+      "lat": "40.699792",
+      "lon": "-74.011776",
+      "prediction": "3",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0166",
+      "lat": "40.761994",
+      "lon": "-73.988069",
+      "prediction": "0",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0167",
+      "lat": "40.734628",
+      "lon": "-74.000565",
+      "prediction": "1",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0168",
+      "lat": "40.808664",
+      "lon": "-73.965686",
+      "prediction": "2",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0169",
+      "lat": "40.80972",
+      "lon": "-73.960243",
+      "prediction": "2",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0170",
+      "lat": "40.732137",
+      "lon": "-73.996314",
+      "prediction": "1",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0171",
+      "lat": "40.724267",
+      "lon": "-74.002362",
+      "prediction": "1",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0172",
+      "lat": "40.797786",
+      "lon": "-73.960722",
+      "prediction": "2",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0173",
+      "lat": "40.755133",
+      "lon": "-73.983812",
+      "prediction": "0",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0174",
+      "lat": "40.713443",
+      "lon": "-74.007056",
+      "prediction": "3",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0175",
+      "lat": "40.705096",
+      "lon": "-74.015254",
+      "prediction": "3",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0176",
+      "lat": "40.745867",
+      "lon": "-73.988608",
+      "prediction": "4",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0177",
+      "lat": "40.745235",
+      "lon": "-73.979231",
+      "prediction": "4",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0178",
+      "lat": "40.730251",
+      "lon": "-74.00116",
+      "prediction": "1",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0179",
+      "lat": "40.763233",
+      "lon": "-73.981931",
+      "prediction": "0",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0180",
+      "lat": "40.804545",
+      "lon": "-73.963546",
+      "prediction": "2",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0181",
+      "lat": "40.736224",
+      "lon": "-73.992673",
+      "prediction": "1",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0182",
+      "lat": "40.806619",
+      "lon": "-73.957176",
+      "prediction": "2",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0183",
+      "lat": "40.804936",
+      "lon": "-73.956251",
+      "prediction": "2",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0184",
+      "lat": "40.708657",
+      "lon": "-74.004512",
+      "prediction": "3",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0185",
+      "lat": "40.759132",
+      "lon": "-73.984629",
+      "prediction": "0",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0186",
+      "lat": "40.8113",
+      "lon": "-73.958959",
+      "prediction": "2",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0187",
+      "lat": "40.704217",
+      "lon": "-74.006029",
+      "prediction": "3",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0188",
+      "lat": "40.761667",
+      "lon": "-73.985798",
+      "prediction": "0",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0189",
+      "lat": "40.759798",
+      "lon": "-73.977804",
+      "prediction": "0",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0190",
+      "lat": "40.813174",
+      "lon": "-73.962781",
+      "prediction": "2",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0191",
+      "lat": "40.73837",
+      "lon": "-73.982018",
+      "prediction": "4",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0192",
+      "lat": "40.751099",
+      "lon": "-73.981841",
+      "prediction": "4",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0193",
+      "lat": "40.811988",
+      "lon": "-73.965147",
+      "prediction": "2",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0194",
+      "lat": "40.735706",
+      "lon": "-73.996742",
+      "prediction": "1",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0195",
+      "lat": "40.759701",
+      "lon": "-73.971821",
+      "prediction": "0",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0196",
+      "lat": "40.71878",
+      "lon": "-73.992006",
+      "prediction": "1",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0197",
+      "lat": "40.749134",
+      "lon": "-73.98604",
+      "prediction": "4",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0198",
+      "lat": "40.746418",
+      "lon": "-73.983846",
+      "prediction": "4",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0199",
+      "lat": "40.706244",
+      "lon": "-74.007019",
+      "prediction": "3",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0200",
+      "lat": "40.746595",
+      "lon": "-73.988681",
+      "prediction": "4",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0201",
+      "lat": "40.750163",
+      "lon": "-73.990424",
+      "prediction": "4",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0202",
+      "lat": "40.752918",
+      "lon": "-73.979724",
+      "prediction": "0",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0203",
+      "lat": "40.71149",
+      "lon": "-74.010401",
+      "prediction": "3",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0204",
+      "lat": "40.736527",
+      "lon": "-73.992635",
+      "prediction": "1",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0205",
+      "lat": "40.811831",
+      "lon": "-73.962224",
+      "prediction": "2",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0206",
+      "lat": "40.806552",
+      "lon": "-73.963095",
+      "prediction": "2",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0207",
+      "lat": "40.805829",
+      "lon": "-73.959429",
+      "prediction": "2",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0208",
+      "lat": "40.755816",
+      "lon": "-73.985124",
+      "prediction": "0",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0209",
+      "lat": "40.745016",
+      "lon": "-73.983541",
+      "prediction": "4",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0210",
+      "lat": "40.709806",
+      "lon": "-74.005294",
+      "prediction": "3",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0211",
+      "lat": "40.75687",
+      "lon": "-73.986548",
+      "prediction": "0",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0212",
+      "lat": "40.726539",
+      "lon": "-73.999304",
+      "prediction": "1",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0213",
+      "lat": "40.756862",
+      "lon": "-73.975756",
+      "prediction": "0",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0214",
+      "lat": "40.803637",
+      "lon": "-73.960422",
+      "prediction": "2",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0215",
+      "lat": "40.704278",
+      "lon": "-73.999361",
+      "prediction": "3",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0216",
+      "lat": "40.709698",
+      "lon": "-74.009644",
+      "prediction": "3",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0217",
+      "lat": "40.723655",
+      "lon": "-73.979888",
+      "prediction": "1",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0218",
+      "lat": "40.727919",
+      "lon": "-73.997185",
+      "prediction": "1",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0219",
+      "lat": "40.709852",
+      "lon": "-74.004852",
+      "prediction": "3",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0220",
+      "lat": "40.703048",
+      "lon": "-74.000617",
+      "prediction": "3",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0221",
+      "lat": "40.728334",
+      "lon": "-73.998634",
+      "prediction": "1",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0222",
+      "lat": "40.748619",
+      "lon": "-73.987333",
+      "prediction": "4",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0223",
+      "lat": "40.810074",
+      "lon": "-73.964786",
+      "prediction": "2",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0224",
+      "lat": "40.811708",
+      "lon": "-73.974267",
+      "prediction": "2",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0225",
+      "lat": "40.738257",
+      "lon": "-73.986906",
+      "prediction": "4",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0226",
+      "lat": "40.761859",
+      "lon": "-73.981677",
+      "prediction": "0",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0227",
+      "lat": "40.748869",
+      "lon": "-73.98527",
+      "prediction": "4",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0228",
+      "lat": "40.725773",
+      "lon": "-73.995272",
+      "prediction": "1",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0229",
+      "lat": "40.698658",
+      "lon": "-74.000183",
+      "prediction": "3",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0230",
+      "lat": "40.704089",
+      "lon": "-74.004853",
+      "prediction": "3",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0231",
+      "lat": "40.752377",
+      "lon": "-73.993056",
+      "prediction": "4",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0232",
+      "lat": "40.80728",
+      "lon": "-73.954753",
+      "prediction": "2",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0233",
+      "lat": "40.732513",
+      "lon": "-73.993468",
+      "prediction": "1",
+      "violation_type": "Speeding"
+    },
+    {
+      "violation_id": "V0234",
+      "lat": "40.709405",
+      "lon": "-74.012628",
+      "prediction": "3",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0235",
+      "lat": "40.741599",
+      "lon": "-73.981294",
+      "prediction": "4",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0236",
+      "lat": "40.742848",
+      "lon": "-73.987525",
+      "prediction": "4",
+      "violation_type": "DUI"
+    },
+    {
+      "violation_id": "V0237",
+      "lat": "40.731491",
+      "lon": "-74.006787",
+      "prediction": "1",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0238",
+      "lat": "40.756014",
+      "lon": "-73.986836",
+      "prediction": "0",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0239",
+      "lat": "40.798816",
+      "lon": "-73.96505",
+      "prediction": "2",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0240",
+      "lat": "40.808243",
+      "lon": "-73.963788",
+      "prediction": "2",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0241",
+      "lat": "40.703356",
+      "lon": "-74.005005",
+      "prediction": "3",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0242",
+      "lat": "40.804576",
+      "lon": "-73.966389",
+      "prediction": "2",
+      "violation_type": "Using Mobile Phone"
+    },
+    {
+      "violation_id": "V0243",
+      "lat": "40.802906",
+      "lon": "-73.956926",
+      "prediction": "2",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0244",
+      "lat": "40.742606",
+      "lon": "-73.986736",
+      "prediction": "4",
+      "violation_type": "Red Light Violation"
+    },
+    {
+      "violation_id": "V0245",
+      "lat": "40.812308",
+      "lon": "-73.954861",
+      "prediction": "2",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0246",
+      "lat": "40.738253",
+      "lon": "-73.996797",
+      "prediction": "1",
+      "violation_type": "Illegal Turn"
+    },
+    {
+      "violation_id": "V0247",
+      "lat": "40.816714",
+      "lon": "-73.953199",
+      "prediction": "2",
+      "violation_type": "Seatbelt Violation"
+    },
+    {
+      "violation_id": "V0248",
+      "lat": "40.730819",
+      "lon": "-73.999982",
+      "prediction": "1",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0249",
+      "lat": "40.72969",
+      "lon": "-73.994874",
+      "prediction": "1",
+      "violation_type": "Reckless Driving"
+    },
+    {
+      "violation_id": "V0250",
+      "lat": "40.809423",
+      "lon": "-73.959571",
+      "prediction": "2",
+      "violation_type": "Illegal Turn"
+    }
+  ],
+  "top_locations": [
+    {
+      "Location": "40.693272,-74.009880",
+      "count": "1"
+    },
+    {
+      "Location": "40.694782,-74.013041",
+      "count": "1"
+    },
+    {
+      "Location": "40.695036,-74.018188",
+      "count": "1"
+    },
+    {
+      "Location": "40.695169,-74.016876",
+      "count": "1"
+    },
+    {
+      "Location": "40.695851,-74.002543",
+      "count": "1"
+    },
+    {
+      "Location": "40.695976,-74.006994",
+      "count": "1"
+    },
+    {
+      "Location": "40.696674,-74.005314",
+      "count": "1"
+    },
+    {
+      "Location": "40.696785,-74.015553",
+      "count": "1"
+    },
+    {
+      "Location": "40.696874,-74.019104",
+      "count": "1"
+    },
+    {
+      "Location": "40.696952,-74.014463",
+      "count": "1"
+    },
+    {
+      "Location": "40.697070,-74.007793",
+      "count": "1"
+    },
+    {
+      "Location": "40.697078,-74.013638",
+      "count": "1"
+    },
+    {
+      "Location": "40.698196,-74.007095",
+      "count": "1"
+    },
+    {
+      "Location": "40.698307,-73.995227",
+      "count": "1"
+    },
+    {
+      "Location": "40.698371,-74.007422",
+      "count": "1"
+    }
+  ],
+  "time_type": [
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "0",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "1",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "4",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "4",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "5",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "6",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "6",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "6",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "6",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "7",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "7",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "7",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "7",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "7",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "7",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "8",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "8",
+      "Violation_Type": "Illegal Turn",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "8",
+      "Violation_Type": "Reckless Driving",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "8",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "8",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "8",
+      "Violation_Type": "Speeding",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "8",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "9",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "9",
+      "Violation_Type": "Illegal Turn",
+      "count": "6"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "9",
+      "Violation_Type": "Reckless Driving",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "9",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "9",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "9",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "10",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "10",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "10",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "10",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "10",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "11",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "11",
+      "Violation_Type": "Reckless Driving",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "11",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "11",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "11",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "12",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "12",
+      "Violation_Type": "Reckless Driving",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "12",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "12",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "12",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "13",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "13",
+      "Violation_Type": "Illegal Turn",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "13",
+      "Violation_Type": "Reckless Driving",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "13",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "13",
+      "Violation_Type": "Speeding",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "13",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "14",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "14",
+      "Violation_Type": "Reckless Driving",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "14",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "14",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "14",
+      "Violation_Type": "Speeding",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "14",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "15",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "15",
+      "Violation_Type": "Illegal Turn",
+      "count": "7"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "15",
+      "Violation_Type": "Reckless Driving",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "15",
+      "Violation_Type": "Red Light Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "15",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "15",
+      "Violation_Type": "Speeding",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "15",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "16",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "16",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "16",
+      "Violation_Type": "Reckless Driving",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "16",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "16",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "16",
+      "Violation_Type": "Speeding",
+      "count": "7"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "16",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "6"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "17",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "17",
+      "Violation_Type": "Illegal Turn",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "17",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "17",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "17",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "17",
+      "Violation_Type": "Speeding",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "18",
+      "Violation_Type": "DUI",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "18",
+      "Violation_Type": "Red Light Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "18",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "18",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "18",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "19",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "19",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "19",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "19",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "19",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "20",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "20",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "20",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "20",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "21",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "21",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "21",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "21",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "21",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "22",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "22",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "22",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Monday",
+      "Hour": "23",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "0",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "2",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "4",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "5",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "5",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "5",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "6",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "6",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "7",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "7",
+      "Violation_Type": "Illegal Turn",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "7",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "7",
+      "Violation_Type": "Red Light Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "7",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "7",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "7",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "8",
+      "Violation_Type": "DUI",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "8",
+      "Violation_Type": "Illegal Turn",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "8",
+      "Violation_Type": "Reckless Driving",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "8",
+      "Violation_Type": "Red Light Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "8",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "8",
+      "Violation_Type": "Speeding",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "8",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "9",
+      "Violation_Type": "DUI",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "9",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "9",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "9",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "9",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "9",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "9",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "10",
+      "Violation_Type": "DUI",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "10",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "10",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "10",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "11",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "11",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "11",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "12",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "12",
+      "Violation_Type": "Illegal Turn",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "12",
+      "Violation_Type": "Reckless Driving",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "12",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "12",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "12",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "13",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "13",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "13",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "13",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "13",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "13",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "13",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "14",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "14",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "14",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "14",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "14",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "15",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "15",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "15",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "15",
+      "Violation_Type": "Red Light Violation",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "15",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "15",
+      "Violation_Type": "Speeding",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "15",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "16",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "16",
+      "Violation_Type": "Illegal Turn",
+      "count": "6"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "16",
+      "Violation_Type": "Reckless Driving",
+      "count": "6"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "16",
+      "Violation_Type": "Red Light Violation",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "16",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "6"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "16",
+      "Violation_Type": "Speeding",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "16",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "17",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "17",
+      "Violation_Type": "Illegal Turn",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "17",
+      "Violation_Type": "Reckless Driving",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "17",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "17",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "17",
+      "Violation_Type": "Speeding",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "17",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "18",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "18",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "18",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "18",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "18",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "18",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "19",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "19",
+      "Violation_Type": "Illegal Turn",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "19",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "19",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "19",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "19",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "20",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "20",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "20",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "20",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "21",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "21",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "21",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "21",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "22",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "22",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "22",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "23",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Tuesday",
+      "Hour": "23",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "0",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "1",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "1",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "3",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "3",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "4",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "5",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "5",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "5",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "6",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "6",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "6",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "7",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "7",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "7",
+      "Violation_Type": "Red Light Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "7",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "7",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "7",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "8",
+      "Violation_Type": "DUI",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "8",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "8",
+      "Violation_Type": "Reckless Driving",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "8",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "8",
+      "Violation_Type": "Speeding",
+      "count": "6"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "9",
+      "Violation_Type": "DUI",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "9",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "9",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "9",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "9",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "9",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "9",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "10",
+      "Violation_Type": "Illegal Turn",
+      "count": "6"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "10",
+      "Violation_Type": "Red Light Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "10",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "10",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "10",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "11",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "11",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "11",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "11",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "11",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "12",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "12",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "12",
+      "Violation_Type": "Red Light Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "12",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "12",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "13",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "13",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "13",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "13",
+      "Violation_Type": "Speeding",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "13",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "14",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "14",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "14",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "14",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "14",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "15",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "15",
+      "Violation_Type": "Illegal Turn",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "15",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "15",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "15",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "16",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "16",
+      "Violation_Type": "Illegal Turn",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "16",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "16",
+      "Violation_Type": "Red Light Violation",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "16",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "6"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "16",
+      "Violation_Type": "Speeding",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "16",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "17",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "17",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "17",
+      "Violation_Type": "Reckless Driving",
+      "count": "8"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "17",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "17",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "17",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "17",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "18",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "18",
+      "Violation_Type": "Illegal Turn",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "18",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "18",
+      "Violation_Type": "Red Light Violation",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "18",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "18",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "18",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "19",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "19",
+      "Violation_Type": "Illegal Turn",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "19",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "19",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "19",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "19",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "20",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "20",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "20",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "20",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "20",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "21",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "21",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "21",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "21",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "22",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "22",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "23",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Wednesday",
+      "Hour": "23",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "0",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "0",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "2",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "2",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "3",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "3",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "4",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "4",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "6",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "6",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "6",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "7",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "7",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "7",
+      "Violation_Type": "Reckless Driving",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "7",
+      "Violation_Type": "Red Light Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "7",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "7",
+      "Violation_Type": "Speeding",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "7",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "8",
+      "Violation_Type": "DUI",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "8",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "8",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "8",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "8",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "8",
+      "Violation_Type": "Speeding",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "8",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "9",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "9",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "9",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "9",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "9",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "9",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "9",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "10",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "10",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "10",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "10",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "10",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "11",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "11",
+      "Violation_Type": "Illegal Turn",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "11",
+      "Violation_Type": "Reckless Driving",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "11",
+      "Violation_Type": "Red Light Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "11",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "11",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "11",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "12",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "12",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "12",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "12",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "13",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "13",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "13",
+      "Violation_Type": "Red Light Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "13",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "13",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "13",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "14",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "14",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "14",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "14",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "14",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "14",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "15",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "15",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "15",
+      "Violation_Type": "Reckless Driving",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "15",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "15",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "15",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "15",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "16",
+      "Violation_Type": "DUI",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "16",
+      "Violation_Type": "Illegal Turn",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "16",
+      "Violation_Type": "Reckless Driving",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "16",
+      "Violation_Type": "Red Light Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "16",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "16",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "16",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "17",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "17",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "17",
+      "Violation_Type": "Reckless Driving",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "17",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "17",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "17",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "18",
+      "Violation_Type": "DUI",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "18",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "18",
+      "Violation_Type": "Reckless Driving",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "18",
+      "Violation_Type": "Red Light Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "18",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "18",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "18",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "19",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "19",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "19",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "20",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "20",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "21",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "21",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "21",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "22",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Thursday",
+      "Hour": "23",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "1",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "2",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "2",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "5",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "5",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "5",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "6",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "6",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "6",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "6",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "7",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "7",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "7",
+      "Violation_Type": "Reckless Driving",
+      "count": "6"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "7",
+      "Violation_Type": "Red Light Violation",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "7",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "7",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "8",
+      "Violation_Type": "DUI",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "8",
+      "Violation_Type": "Reckless Driving",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "8",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "8",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "8",
+      "Violation_Type": "Speeding",
+      "count": "6"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "8",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "9",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "9",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "9",
+      "Violation_Type": "Reckless Driving",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "9",
+      "Violation_Type": "Red Light Violation",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "9",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "9",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "9",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "10",
+      "Violation_Type": "DUI",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "10",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "10",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "10",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "10",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "11",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "11",
+      "Violation_Type": "Illegal Turn",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "11",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "11",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "11",
+      "Violation_Type": "Speeding",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "11",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "12",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "12",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "12",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "12",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "12",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "12",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "12",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "13",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "13",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "13",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "13",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "13",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "13",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "14",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "14",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "14",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "14",
+      "Violation_Type": "Red Light Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "14",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "14",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "15",
+      "Violation_Type": "DUI",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "15",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "15",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "15",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "15",
+      "Violation_Type": "Speeding",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "15",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "16",
+      "Violation_Type": "DUI",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "16",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "16",
+      "Violation_Type": "Reckless Driving",
+      "count": "6"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "16",
+      "Violation_Type": "Red Light Violation",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "16",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "16",
+      "Violation_Type": "Speeding",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "16",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "17",
+      "Violation_Type": "DUI",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "17",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "17",
+      "Violation_Type": "Reckless Driving",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "17",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "17",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "17",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "17",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "18",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "18",
+      "Violation_Type": "Illegal Turn",
+      "count": "6"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "18",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "18",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "18",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "18",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "18",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "6"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "19",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "19",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "19",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "19",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "19",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "20",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "20",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "20",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "20",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "21",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "21",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "21",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "22",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "22",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "22",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Friday",
+      "Hour": "23",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "1",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "2",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "3",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "6",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "6",
+      "Violation_Type": "Red Light Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "6",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "6",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "7",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "7",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "7",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "7",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "7",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "7",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "7",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "8",
+      "Violation_Type": "DUI",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "8",
+      "Violation_Type": "Illegal Turn",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "8",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "8",
+      "Violation_Type": "Red Light Violation",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "8",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "8",
+      "Violation_Type": "Speeding",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "8",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "9",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "9",
+      "Violation_Type": "Reckless Driving",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "9",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "9",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "9",
+      "Violation_Type": "Speeding",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "9",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "10",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "10",
+      "Violation_Type": "Illegal Turn",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "10",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "10",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "10",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "10",
+      "Violation_Type": "Speeding",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "10",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "11",
+      "Violation_Type": "DUI",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "11",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "11",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "11",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "12",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "12",
+      "Violation_Type": "Illegal Turn",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "12",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "12",
+      "Violation_Type": "Red Light Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "12",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "12",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "12",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "13",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "13",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "13",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "13",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "14",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "14",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "14",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "14",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "14",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "14",
+      "Violation_Type": "Speeding",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "14",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "15",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "15",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "15",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "15",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "15",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "15",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "15",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "16",
+      "Violation_Type": "DUI",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "16",
+      "Violation_Type": "Illegal Turn",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "16",
+      "Violation_Type": "Reckless Driving",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "16",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "16",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "16",
+      "Violation_Type": "Speeding",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "16",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "17",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "17",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "17",
+      "Violation_Type": "Reckless Driving",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "17",
+      "Violation_Type": "Red Light Violation",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "17",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "17",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "17",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "18",
+      "Violation_Type": "DUI",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "18",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "18",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "18",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "18",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "18",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "19",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "19",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "19",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "20",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "20",
+      "Violation_Type": "Reckless Driving",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "20",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "20",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "20",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "21",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "21",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "21",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "22",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Saturday",
+      "Hour": "22",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "0",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "0",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "1",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "1",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "2",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "2",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "2",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "3",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "4",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "4",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "4",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "6",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "6",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "7",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "7",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "7",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "7",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "8",
+      "Violation_Type": "DUI",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "8",
+      "Violation_Type": "Illegal Turn",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "8",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "8",
+      "Violation_Type": "Red Light Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "8",
+      "Violation_Type": "Speeding",
+      "count": "8"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "8",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "9",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "9",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "9",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "9",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "9",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "10",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "10",
+      "Violation_Type": "Illegal Turn",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "10",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "10",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "10",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "11",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "11",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "11",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "11",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "11",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "11",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "12",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "12",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "12",
+      "Violation_Type": "Reckless Driving",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "12",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "12",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "13",
+      "Violation_Type": "DUI",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "13",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "13",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "13",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "13",
+      "Violation_Type": "Speeding",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "13",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "14",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "14",
+      "Violation_Type": "Illegal Turn",
+      "count": "7"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "14",
+      "Violation_Type": "Reckless Driving",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "14",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "14",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "14",
+      "Violation_Type": "Speeding",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "14",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "15",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "15",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "15",
+      "Violation_Type": "Reckless Driving",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "15",
+      "Violation_Type": "Red Light Violation",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "15",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "15",
+      "Violation_Type": "Speeding",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "15",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "16",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "16",
+      "Violation_Type": "Illegal Turn",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "16",
+      "Violation_Type": "Reckless Driving",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "16",
+      "Violation_Type": "Red Light Violation",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "16",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "16",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "16",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "17",
+      "Violation_Type": "DUI",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "17",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "17",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "17",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "17",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "17",
+      "Violation_Type": "Speeding",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "17",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "18",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "18",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "18",
+      "Violation_Type": "Red Light Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "18",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "4"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "18",
+      "Violation_Type": "Speeding",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "18",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "5"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "19",
+      "Violation_Type": "DUI",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "19",
+      "Violation_Type": "Illegal Turn",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "19",
+      "Violation_Type": "Reckless Driving",
+      "count": "3"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "19",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "19",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "19",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "20",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "20",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "20",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "20",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "2"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "21",
+      "Violation_Type": "DUI",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "21",
+      "Violation_Type": "Reckless Driving",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "21",
+      "Violation_Type": "Seatbelt Violation",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "21",
+      "Violation_Type": "Using Mobile Phone",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "22",
+      "Violation_Type": "Illegal Turn",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "22",
+      "Violation_Type": "Speeding",
+      "count": "1"
+    },
+    {
+      "DayOfWeek": "Sunday",
+      "Hour": "23",
+      "Violation_Type": "Red Light Violation",
+      "count": "2"
+    }
+  ],
+  "time_type_matrix": [
+    {
+      "Hour": "0",
+      "violation_type": "Reckless Driving",
+      "violation_count": "1",
+      "total_risk_score": "8"
+    },
+    {
+      "Hour": "0",
+      "violation_type": "Red Light Violation",
+      "violation_count": "4",
+      "total_risk_score": "28"
+    },
+    {
+      "Hour": "0",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "1",
+      "total_risk_score": "2"
+    },
+    {
+      "Hour": "0",
+      "violation_type": "Speeding",
+      "violation_count": "2",
+      "total_risk_score": "12"
+    },
+    {
+      "Hour": "1",
+      "violation_type": "DUI",
+      "violation_count": "2",
+      "total_risk_score": "20"
+    },
+    {
+      "Hour": "1",
+      "violation_type": "Illegal Turn",
+      "violation_count": "1",
+      "total_risk_score": "3"
+    },
+    {
+      "Hour": "1",
+      "violation_type": "Reckless Driving",
+      "violation_count": "1",
+      "total_risk_score": "8"
+    },
+    {
+      "Hour": "1",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "1",
+      "total_risk_score": "2"
+    },
+    {
+      "Hour": "1",
+      "violation_type": "Speeding",
+      "violation_count": "2",
+      "total_risk_score": "12"
+    },
+    {
+      "Hour": "1",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "1",
+      "total_risk_score": "4"
+    },
+    {
+      "Hour": "2",
+      "violation_type": "DUI",
+      "violation_count": "2",
+      "total_risk_score": "20"
+    },
+    {
+      "Hour": "2",
+      "violation_type": "Illegal Turn",
+      "violation_count": "2",
+      "total_risk_score": "6"
+    },
+    {
+      "Hour": "2",
+      "violation_type": "Reckless Driving",
+      "violation_count": "1",
+      "total_risk_score": "8"
+    },
+    {
+      "Hour": "2",
+      "violation_type": "Speeding",
+      "violation_count": "1",
+      "total_risk_score": "6"
+    },
+    {
+      "Hour": "2",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "3",
+      "total_risk_score": "12"
+    },
+    {
+      "Hour": "3",
+      "violation_type": "Illegal Turn",
+      "violation_count": "2",
+      "total_risk_score": "6"
+    },
+    {
+      "Hour": "3",
+      "violation_type": "Red Light Violation",
+      "violation_count": "1",
+      "total_risk_score": "7"
+    },
+    {
+      "Hour": "3",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "1",
+      "total_risk_score": "2"
+    },
+    {
+      "Hour": "3",
+      "violation_type": "Speeding",
+      "violation_count": "1",
+      "total_risk_score": "6"
+    },
+    {
+      "Hour": "3",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "1",
+      "total_risk_score": "4"
+    },
+    {
+      "Hour": "4",
+      "violation_type": "DUI",
+      "violation_count": "2",
+      "total_risk_score": "20"
+    },
+    {
+      "Hour": "4",
+      "violation_type": "Illegal Turn",
+      "violation_count": "2",
+      "total_risk_score": "6"
+    },
+    {
+      "Hour": "4",
+      "violation_type": "Reckless Driving",
+      "violation_count": "4",
+      "total_risk_score": "32"
+    },
+    {
+      "Hour": "4",
+      "violation_type": "Red Light Violation",
+      "violation_count": "1",
+      "total_risk_score": "7"
+    },
+    {
+      "Hour": "4",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "1",
+      "total_risk_score": "2"
+    },
+    {
+      "Hour": "5",
+      "violation_type": "DUI",
+      "violation_count": "2",
+      "total_risk_score": "20"
+    },
+    {
+      "Hour": "5",
+      "violation_type": "Reckless Driving",
+      "violation_count": "3",
+      "total_risk_score": "24"
+    },
+    {
+      "Hour": "5",
+      "violation_type": "Red Light Violation",
+      "violation_count": "1",
+      "total_risk_score": "7"
+    },
+    {
+      "Hour": "5",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "1",
+      "total_risk_score": "2"
+    },
+    {
+      "Hour": "5",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "3",
+      "total_risk_score": "12"
+    },
+    {
+      "Hour": "6",
+      "violation_type": "DUI",
+      "violation_count": "3",
+      "total_risk_score": "30"
+    },
+    {
+      "Hour": "6",
+      "violation_type": "Illegal Turn",
+      "violation_count": "3",
+      "total_risk_score": "9"
+    },
+    {
+      "Hour": "6",
+      "violation_type": "Reckless Driving",
+      "violation_count": "4",
+      "total_risk_score": "32"
+    },
+    {
+      "Hour": "6",
+      "violation_type": "Red Light Violation",
+      "violation_count": "8",
+      "total_risk_score": "56"
+    },
+    {
+      "Hour": "6",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "4",
+      "total_risk_score": "8"
+    },
+    {
+      "Hour": "6",
+      "violation_type": "Speeding",
+      "violation_count": "5",
+      "total_risk_score": "30"
+    },
+    {
+      "Hour": "6",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "3",
+      "total_risk_score": "12"
+    },
+    {
+      "Hour": "7",
+      "violation_type": "DUI",
+      "violation_count": "14",
+      "total_risk_score": "140"
+    },
+    {
+      "Hour": "7",
+      "violation_type": "Illegal Turn",
+      "violation_count": "8",
+      "total_risk_score": "24"
+    },
+    {
+      "Hour": "7",
+      "violation_type": "Reckless Driving",
+      "violation_count": "14",
+      "total_risk_score": "112"
+    },
+    {
+      "Hour": "7",
+      "violation_type": "Red Light Violation",
+      "violation_count": "16",
+      "total_risk_score": "112"
+    },
+    {
+      "Hour": "7",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "11",
+      "total_risk_score": "22"
+    },
+    {
+      "Hour": "7",
+      "violation_type": "Speeding",
+      "violation_count": "10",
+      "total_risk_score": "60"
+    },
+    {
+      "Hour": "7",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "11",
+      "total_risk_score": "44"
+    },
+    {
+      "Hour": "8",
+      "violation_type": "DUI",
+      "violation_count": "29",
+      "total_risk_score": "290"
+    },
+    {
+      "Hour": "8",
+      "violation_type": "Illegal Turn",
+      "violation_count": "19",
+      "total_risk_score": "57"
+    },
+    {
+      "Hour": "8",
+      "violation_type": "Reckless Driving",
+      "violation_count": "21",
+      "total_risk_score": "168"
+    },
+    {
+      "Hour": "8",
+      "violation_type": "Red Light Violation",
+      "violation_count": "17",
+      "total_risk_score": "119"
+    },
+    {
+      "Hour": "8",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "8",
+      "total_risk_score": "16"
+    },
+    {
+      "Hour": "8",
+      "violation_type": "Speeding",
+      "violation_count": "33",
+      "total_risk_score": "198"
+    },
+    {
+      "Hour": "8",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "18",
+      "total_risk_score": "72"
+    },
+    {
+      "Hour": "9",
+      "violation_type": "DUI",
+      "violation_count": "17",
+      "total_risk_score": "170"
+    },
+    {
+      "Hour": "9",
+      "violation_type": "Illegal Turn",
+      "violation_count": "16",
+      "total_risk_score": "48"
+    },
+    {
+      "Hour": "9",
+      "violation_type": "Reckless Driving",
+      "violation_count": "18",
+      "total_risk_score": "144"
+    },
+    {
+      "Hour": "9",
+      "violation_type": "Red Light Violation",
+      "violation_count": "14",
+      "total_risk_score": "98"
+    },
+    {
+      "Hour": "9",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "17",
+      "total_risk_score": "34"
+    },
+    {
+      "Hour": "9",
+      "violation_type": "Speeding",
+      "violation_count": "11",
+      "total_risk_score": "66"
+    },
+    {
+      "Hour": "9",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "12",
+      "total_risk_score": "48"
+    },
+    {
+      "Hour": "10",
+      "violation_type": "DUI",
+      "violation_count": "14",
+      "total_risk_score": "140"
+    },
+    {
+      "Hour": "10",
+      "violation_type": "Illegal Turn",
+      "violation_count": "17",
+      "total_risk_score": "51"
+    },
+    {
+      "Hour": "10",
+      "violation_type": "Reckless Driving",
+      "violation_count": "6",
+      "total_risk_score": "48"
+    },
+    {
+      "Hour": "10",
+      "violation_type": "Red Light Violation",
+      "violation_count": "11",
+      "total_risk_score": "77"
+    },
+    {
+      "Hour": "10",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "14",
+      "total_risk_score": "28"
+    },
+    {
+      "Hour": "10",
+      "violation_type": "Speeding",
+      "violation_count": "10",
+      "total_risk_score": "60"
+    },
+    {
+      "Hour": "10",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "4",
+      "total_risk_score": "16"
+    },
+    {
+      "Hour": "11",
+      "violation_type": "DUI",
+      "violation_count": "11",
+      "total_risk_score": "110"
+    },
+    {
+      "Hour": "11",
+      "violation_type": "Illegal Turn",
+      "violation_count": "11",
+      "total_risk_score": "33"
+    },
+    {
+      "Hour": "11",
+      "violation_type": "Reckless Driving",
+      "violation_count": "16",
+      "total_risk_score": "128"
+    },
+    {
+      "Hour": "11",
+      "violation_type": "Red Light Violation",
+      "violation_count": "7",
+      "total_risk_score": "49"
+    },
+    {
+      "Hour": "11",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "9",
+      "total_risk_score": "18"
+    },
+    {
+      "Hour": "11",
+      "violation_type": "Speeding",
+      "violation_count": "7",
+      "total_risk_score": "42"
+    },
+    {
+      "Hour": "11",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "16",
+      "total_risk_score": "64"
+    },
+    {
+      "Hour": "12",
+      "violation_type": "DUI",
+      "violation_count": "10",
+      "total_risk_score": "100"
+    },
+    {
+      "Hour": "12",
+      "violation_type": "Illegal Turn",
+      "violation_count": "15",
+      "total_risk_score": "45"
+    },
+    {
+      "Hour": "12",
+      "violation_type": "Reckless Driving",
+      "violation_count": "13",
+      "total_risk_score": "104"
+    },
+    {
+      "Hour": "12",
+      "violation_type": "Red Light Violation",
+      "violation_count": "11",
+      "total_risk_score": "77"
+    },
+    {
+      "Hour": "12",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "11",
+      "total_risk_score": "22"
+    },
+    {
+      "Hour": "12",
+      "violation_type": "Speeding",
+      "violation_count": "9",
+      "total_risk_score": "54"
+    },
+    {
+      "Hour": "12",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "7",
+      "total_risk_score": "28"
+    },
+    {
+      "Hour": "13",
+      "violation_type": "DUI",
+      "violation_count": "15",
+      "total_risk_score": "150"
+    },
+    {
+      "Hour": "13",
+      "violation_type": "Illegal Turn",
+      "violation_count": "13",
+      "total_risk_score": "39"
+    },
+    {
+      "Hour": "13",
+      "violation_type": "Reckless Driving",
+      "violation_count": "7",
+      "total_risk_score": "56"
+    },
+    {
+      "Hour": "13",
+      "violation_type": "Red Light Violation",
+      "violation_count": "10",
+      "total_risk_score": "70"
+    },
+    {
+      "Hour": "13",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "14",
+      "total_risk_score": "28"
+    },
+    {
+      "Hour": "13",
+      "violation_type": "Speeding",
+      "violation_count": "16",
+      "total_risk_score": "96"
+    },
+    {
+      "Hour": "13",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "13",
+      "total_risk_score": "52"
+    },
+    {
+      "Hour": "14",
+      "violation_type": "DUI",
+      "violation_count": "19",
+      "total_risk_score": "190"
+    },
+    {
+      "Hour": "14",
+      "violation_type": "Illegal Turn",
+      "violation_count": "12",
+      "total_risk_score": "36"
+    },
+    {
+      "Hour": "14",
+      "violation_type": "Reckless Driving",
+      "violation_count": "13",
+      "total_risk_score": "104"
+    },
+    {
+      "Hour": "14",
+      "violation_type": "Red Light Violation",
+      "violation_count": "9",
+      "total_risk_score": "63"
+    },
+    {
+      "Hour": "14",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "8",
+      "total_risk_score": "16"
+    },
+    {
+      "Hour": "14",
+      "violation_type": "Speeding",
+      "violation_count": "14",
+      "total_risk_score": "84"
+    },
+    {
+      "Hour": "14",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "10",
+      "total_risk_score": "40"
+    },
+    {
+      "Hour": "15",
+      "violation_type": "DUI",
+      "violation_count": "18",
+      "total_risk_score": "180"
+    },
+    {
+      "Hour": "15",
+      "violation_type": "Illegal Turn",
+      "violation_count": "17",
+      "total_risk_score": "51"
+    },
+    {
+      "Hour": "15",
+      "violation_type": "Reckless Driving",
+      "violation_count": "19",
+      "total_risk_score": "152"
+    },
+    {
+      "Hour": "15",
+      "violation_type": "Red Light Violation",
+      "violation_count": "17",
+      "total_risk_score": "119"
+    },
+    {
+      "Hour": "15",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "14",
+      "total_risk_score": "28"
+    },
+    {
+      "Hour": "15",
+      "violation_type": "Speeding",
+      "violation_count": "22",
+      "total_risk_score": "132"
+    },
+    {
+      "Hour": "15",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "21",
+      "total_risk_score": "84"
+    },
+    {
+      "Hour": "16",
+      "violation_type": "DUI",
+      "violation_count": "18",
+      "total_risk_score": "180"
+    },
+    {
+      "Hour": "16",
+      "violation_type": "Illegal Turn",
+      "violation_count": "25",
+      "total_risk_score": "75"
+    },
+    {
+      "Hour": "16",
+      "violation_type": "Reckless Driving",
+      "violation_count": "27",
+      "total_risk_score": "216"
+    },
+    {
+      "Hour": "16",
+      "violation_type": "Red Light Violation",
+      "violation_count": "25",
+      "total_risk_score": "175"
+    },
+    {
+      "Hour": "16",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "22",
+      "total_risk_score": "44"
+    },
+    {
+      "Hour": "16",
+      "violation_type": "Speeding",
+      "violation_count": "27",
+      "total_risk_score": "162"
+    },
+    {
+      "Hour": "16",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "29",
+      "total_risk_score": "116"
+    },
+    {
+      "Hour": "17",
+      "violation_type": "DUI",
+      "violation_count": "17",
+      "total_risk_score": "170"
+    },
+    {
+      "Hour": "17",
+      "violation_type": "Illegal Turn",
+      "violation_count": "17",
+      "total_risk_score": "51"
+    },
+    {
+      "Hour": "17",
+      "violation_type": "Reckless Driving",
+      "violation_count": "25",
+      "total_risk_score": "200"
+    },
+    {
+      "Hour": "17",
+      "violation_type": "Red Light Violation",
+      "violation_count": "12",
+      "total_risk_score": "84"
+    },
+    {
+      "Hour": "17",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "20",
+      "total_risk_score": "40"
+    },
+    {
+      "Hour": "17",
+      "violation_type": "Speeding",
+      "violation_count": "18",
+      "total_risk_score": "108"
+    },
+    {
+      "Hour": "17",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "16",
+      "total_risk_score": "64"
+    },
+    {
+      "Hour": "18",
+      "violation_type": "DUI",
+      "violation_count": "18",
+      "total_risk_score": "180"
+    },
+    {
+      "Hour": "18",
+      "violation_type": "Illegal Turn",
+      "violation_count": "14",
+      "total_risk_score": "42"
+    },
+    {
+      "Hour": "18",
+      "violation_type": "Reckless Driving",
+      "violation_count": "10",
+      "total_risk_score": "80"
+    },
+    {
+      "Hour": "18",
+      "violation_type": "Red Light Violation",
+      "violation_count": "16",
+      "total_risk_score": "112"
+    },
+    {
+      "Hour": "18",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "13",
+      "total_risk_score": "26"
+    },
+    {
+      "Hour": "18",
+      "violation_type": "Speeding",
+      "violation_count": "11",
+      "total_risk_score": "66"
+    },
+    {
+      "Hour": "18",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "20",
+      "total_risk_score": "80"
+    },
+    {
+      "Hour": "19",
+      "violation_type": "DUI",
+      "violation_count": "9",
+      "total_risk_score": "90"
+    },
+    {
+      "Hour": "19",
+      "violation_type": "Illegal Turn",
+      "violation_count": "15",
+      "total_risk_score": "45"
+    },
+    {
+      "Hour": "19",
+      "violation_type": "Reckless Driving",
+      "violation_count": "6",
+      "total_risk_score": "48"
+    },
+    {
+      "Hour": "19",
+      "violation_type": "Red Light Violation",
+      "violation_count": "7",
+      "total_risk_score": "49"
+    },
+    {
+      "Hour": "19",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "9",
+      "total_risk_score": "18"
+    },
+    {
+      "Hour": "19",
+      "violation_type": "Speeding",
+      "violation_count": "6",
+      "total_risk_score": "36"
+    },
+    {
+      "Hour": "19",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "6",
+      "total_risk_score": "24"
+    },
+    {
+      "Hour": "20",
+      "violation_type": "DUI",
+      "violation_count": "3",
+      "total_risk_score": "30"
+    },
+    {
+      "Hour": "20",
+      "violation_type": "Illegal Turn",
+      "violation_count": "3",
+      "total_risk_score": "9"
+    },
+    {
+      "Hour": "20",
+      "violation_type": "Reckless Driving",
+      "violation_count": "5",
+      "total_risk_score": "40"
+    },
+    {
+      "Hour": "20",
+      "violation_type": "Red Light Violation",
+      "violation_count": "8",
+      "total_risk_score": "56"
+    },
+    {
+      "Hour": "20",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "5",
+      "total_risk_score": "10"
+    },
+    {
+      "Hour": "20",
+      "violation_type": "Speeding",
+      "violation_count": "4",
+      "total_risk_score": "24"
+    },
+    {
+      "Hour": "20",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "7",
+      "total_risk_score": "28"
+    },
+    {
+      "Hour": "21",
+      "violation_type": "DUI",
+      "violation_count": "1",
+      "total_risk_score": "10"
+    },
+    {
+      "Hour": "21",
+      "violation_type": "Illegal Turn",
+      "violation_count": "7",
+      "total_risk_score": "21"
+    },
+    {
+      "Hour": "21",
+      "violation_type": "Reckless Driving",
+      "violation_count": "5",
+      "total_risk_score": "40"
+    },
+    {
+      "Hour": "21",
+      "violation_type": "Red Light Violation",
+      "violation_count": "2",
+      "total_risk_score": "14"
+    },
+    {
+      "Hour": "21",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "11",
+      "total_risk_score": "22"
+    },
+    {
+      "Hour": "21",
+      "violation_type": "Speeding",
+      "violation_count": "3",
+      "total_risk_score": "18"
+    },
+    {
+      "Hour": "21",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "5",
+      "total_risk_score": "20"
+    },
+    {
+      "Hour": "22",
+      "violation_type": "DUI",
+      "violation_count": "2",
+      "total_risk_score": "20"
+    },
+    {
+      "Hour": "22",
+      "violation_type": "Illegal Turn",
+      "violation_count": "1",
+      "total_risk_score": "3"
+    },
+    {
+      "Hour": "22",
+      "violation_type": "Red Light Violation",
+      "violation_count": "3",
+      "total_risk_score": "21"
+    },
+    {
+      "Hour": "22",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "3",
+      "total_risk_score": "6"
+    },
+    {
+      "Hour": "22",
+      "violation_type": "Speeding",
+      "violation_count": "6",
+      "total_risk_score": "36"
+    },
+    {
+      "Hour": "22",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "4",
+      "total_risk_score": "16"
+    },
+    {
+      "Hour": "23",
+      "violation_type": "Reckless Driving",
+      "violation_count": "2",
+      "total_risk_score": "16"
+    },
+    {
+      "Hour": "23",
+      "violation_type": "Red Light Violation",
+      "violation_count": "4",
+      "total_risk_score": "28"
+    },
+    {
+      "Hour": "23",
+      "violation_type": "Seatbelt Violation",
+      "violation_count": "2",
+      "total_risk_score": "4"
+    },
+    {
+      "Hour": "23",
+      "violation_type": "Using Mobile Phone",
+      "violation_count": "1",
+      "total_risk_score": "4"
+    }
+  ]
+}

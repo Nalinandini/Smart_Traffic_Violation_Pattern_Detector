@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Traffic Violation Pattern Detector | AI Telemetry & Hotspot Intelligence</title>
+  <meta name="description" content="Distributed traffic telemetry analytics, machine learning KMeans hotspot detection, and statistical Z-Score surge anomaly monitoring powered by PySpark and Pandas.">
+  
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Traffic Light Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚦</text></svg>">
+  
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  
+  <!-- Custom Design System Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP NAVIGATION BAR
+       ======================================================================== -->
+  <header class="navbar" id="topNavbar">
+    <div class="nav-container">
+      <a href="#landing" class="brand" id="navBrand">
+        <div class="brand-icon">🚦</div>
+        <div class="brand-text">
+          <h1>TrafficPulse AI</h1>
+          <div class="brand-badge">Pattern Detector · v2.0</div>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#landing" class="nav-link active" id="linkLanding"><span>🏠</span> Overview</a></li>
+          <li><a href="#dashboard" class="nav-link" id="linkDashboard"><span>📊</span> Dashboard</a></li>
+          <li><a href="#mapSection" class="nav-link" id="linkMap"><span>🗺️</span> Hotspot Map</a></li>
+          <li><a href="#auditSection" class="nav-link" id="linkAudit"><span>📈</span> Risk Audit</a></li>
+          <li><a href="#apiSection" class="nav-link" id="linkApi"><span>🔌</span> REST API</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="status-indicator" id="liveStatusBadge">
+          <div class="status-dot"></div>
+          <span>System Online</span>
+        </div>
+        <button class="btn btn-secondary btn-sm" id="btnRunPipelineNav">⚡ Run Pipeline</button>
+        <a href="#dashboard" class="btn btn-primary btn-sm" id="btnLaunchControlNav">Open Dashboard</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       CRITICAL TRAFFIC SURGE ALERT STRIP
+       ======================================================================== -->
+  <div class="alert-strip" id="criticalAlertStrip">
+    <div class="alert-content">
+      <div class="alert-message">
+        <div class="alert-icon-ring">🚨</div>
+        <div>
+          <strong>ACTIVE STATISTICAL SURGE:</strong> Critical spike detected at 
+          <span style="color:#FFF; font-weight:700;" id="alertSpikeHourText">16:00 (Rush Hour)</span> 
+          with Z-Score <span style="color:#FFF; font-weight:700;" id="alertSpikeZScoreText">+2.21</span>. 
+          Enforcement deployment dispatched to Midtown & West Village corridors.
+        </div>
+      </div>
+      <a href="#mapSection" class="btn btn-danger btn-sm" id="btnAlertInspect">Inspect Hotspots →</a>
+    </div>
+  </div>
+
+  <!-- MAIN WRAPPER -->
+  <main class="container">
+
+    <!-- ======================================================================
+         SECTION 1: HERO LANDING PAGE
+         ====================================================================== -->
+    <section class="hero-section" id="landing">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="badge badge-cyan">🚦 AI-Powered Distributed Traffic Intelligence</span>
+        </div>
+        <h1 class="hero-title">Smart Traffic Violation Pattern Detector</h1>
+        <p class="hero-subtitle">
+          Distributed telemetry processing with Apache PySpark & Pandas, unsupervised KMeans spatial clustering, and automated statistical Z-Score anomaly detection for precision traffic safety enforcement.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#dashboard" class="btn btn-primary" id="btnHeroDashboard">
+            <span>📊</span> Launch Live Dashboard
+          </a>
+          <a href="#mapSection" class="btn btn-secondary" id="btnHeroMap">
+            <span>🗺️</span> Explore 3D Hotspots
+          </a>
+          <button class="btn btn-secondary" id="btnHeroRunPipeline">
+            <span>⚡</span> Refresh Data Pipeline
+          </button>
+        </div>
+
+        <div class="hero-metrics-grid">
+          <div class="hero-stat-item">
+            <h3 id="heroTotalCount">1,500+</h3>
+            <p>Ingested Violations</p>
+          </div>
+          <div class="hero-stat-item">
+            <h3 id="heroHotspotCount">5 Clusters</h3>
+            <p>ML Spatial Epicenters</p>
+          </div>
+          <div class="hero-stat-item">
+            <h3 id="heroPeakSurge">16:00</h3>
+            <p>Peak Surge Rush Hour</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <img src="assets/hero-banner.jpg" alt="Traffic Telemetry HUD Visualization" id="heroBannerImg" onerror="this.style.display='none'">
+          <div class="hero-overlay-card">
+            <div>
+              <div style="font-size:0.75rem; color:#94A3B8; text-transform:uppercase;">Real-Time Corridor Telemetry</div>
+              <div style="font-size:1.05rem; font-weight:700; color:#FFF;" id="heroOverlayCorridor">Midtown Manhattan (Cluster 0)</div>
+            </div>
+            <span class="badge badge-danger" id="heroOverlayBadge">🔥 High Risk</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CORE CAPABILITIES & ARCHITECTURE SECTION
+         ====================================================================== -->
+    <section class="features-section" id="features">
+      <div class="section-head">
+        <span class="badge badge-cyan">Distributed Architecture</span>
+        <h2>End-to-End Computational Pipeline</h2>
+        <p>Combining big-data distributed processing with machine learning clustering and automated statistical outlier alerts.</p>
+      </div>
+
+      <div class="feature-cards-grid">
+        <div class="feature-card" style="--card-accent: #38BDF8;">
+          <div class="feature-icon">⚡</div>
+          <h3>Dual-Engine ETL Processing</h3>
+          <p>Fault-tolerant streaming and batch aggregation capable of running via Apache Spark (PySpark) on cluster nodes or accelerated local Pandas engine with Parquet serialization.</p>
+        </div>
+
+        <div class="feature-card" style="--card-accent: #EC4899;">
+          <div class="feature-icon">🗺️</div>
+          <h3>KMeans Geospatial Clustering</h3>
+          <p>Unsupervised spatial machine learning automatically grouping infraction coordinates into $k=5$ density centroids with dominant violation classification.</p>
+        </div>
+
+        <div class="feature-card" style="--card-accent: #F59E0B;">
+          <div class="feature-icon">📈</div>
+          <h3>Z-Score Surge Anomaly Detection</h3>
+          <p>Mathematical standard deviation testing ($Z \ge 1.5$) continuously detects abnormal violation surges during peak rush hours for municipal patrol deployment.</p>
+        </div>
+
+        <div class="feature-card" style="--card-accent: #10B981;">
+          <div class="feature-icon">🛡️</div>
+          <h3>Weighted Risk Scoring Model</h3>
+          <p>Multi-factor severity indexing assigning proportional risk points based on infraction lethality (DUI: 10, Reckless: 8, Red Light: 7, Speeding: 6, Seatbelt: 2).</p>
+        </div>
+      </div>
+
+      <!-- Pipeline Step Flow -->
+      <div class="pipeline-flow-container">
+        <div style="font-size:0.85rem; font-weight:700; color:#38BDF8; text-transform:uppercase; margin-bottom:1rem; letter-spacing:0.06em;">
+          Pipeline Execution Sequence
+        </div>
+        <div class="pipeline-flow-grid">
+          <div class="pipeline-step">
+            <div class="step-number">Step 01</div>
+            <div class="step-title">Ingestion</div>
+            <div class="step-desc">Raw CSV & Telemetry streams</div>
+          </div>
+          <div class="pipeline-step">
+            <div class="step-number">Step 02</div>
+            <div class="step-title">Clean & Schema</div>
+            <div class="step-desc">Sanitize datetimes, lat/lon bounds</div>
+          </div>
+          <div class="pipeline-step">
+            <div class="step-number">Step 03</div>
+            <div class="step-title">Temporal Aggs</div>
+            <div class="step-desc">Hourly & Day of Week matrices</div>
+          </div>
+          <div class="pipeline-step">
+            <div class="step-number">Step 04</div>
+            <div class="step-title">ML KMeans</div>
+            <div class="step-desc">Centroid calculation & spatial clusters</div>
+          </div>
+          <div class="pipeline-step">
+            <div class="step-number">Step 05</div>
+            <div class="step-title">Risk & Anomaly</div>
+            <div class="step-desc">Z-Score computation & surge detection</div>
+          </div>
+          <div class="pipeline-step">
+            <div class="step-number">Step 06</div>
+            <div class="step-title">Live Dispatch</div>
+            <div class="step-desc">Interactive dashboard & REST API</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2: INTERACTIVE ANALYTICS DASHBOARD
+         ====================================================================== -->
+    <section class="dashboard-section" id="dashboard">
+      <div class="dashboard-header">
+        <div class="dashboard-title-group">
+          <h2>Traffic Control Center</h2>
+          <p>Real-time telemetry indicators, temporal distribution curves, and multi-factor infraction metrics.</p>
+        </div>
+        <div style="display:flex; gap:10px;">
+          <button class="btn btn-secondary btn-sm" id="btnExportCsv">📥 Export Filtered CSV</button>
+          <button class="btn btn-primary btn-sm" id="btnResetFilters">↺ Reset Filters</button>
+        </div>
+      </div>
+
+      <!-- KPI METRIC CARDS -->
+      <div class="kpi-grid">
+        <div class="kpi-card" style="--kpi-color: #38BDF8;">
+          <div class="kpi-header">
+            <span class="kpi-label">Total Ingested Violations</span>
+            <span class="kpi-icon">🚗</span>
+          </div>
+          <div class="kpi-value" id="kpiTotalViolations">1,500</div>
+          <div class="kpi-footer positive">
+            <span>●</span>
+            <span id="kpiTotalDesc">Verified dataset records</span>
+          </div>
+        </div>
+
+        <div class="kpi-card" style="--kpi-color: #EC4899;">
+          <div class="kpi-header">
+            <span class="kpi-label">Peak Violation Surge</span>
+            <span class="kpi-icon">⏰</span>
+          </div>
+          <div class="kpi-value" id="kpiPeakHour">16:00</div>
+          <div class="kpi-footer danger">
+            <span>🔥</span>
+            <span id="kpiPeakDesc">Z-Score +2.21 (Critical Rush)</span>
+          </div>
+        </div>
+
+        <div class="kpi-card" style="--kpi-color: #F59E0B;">
+          <div class="kpi-header">
+            <span class="kpi-label">Primary Infraction Type</span>
+            <span class="kpi-icon">🚨</span>
+          </div>
+          <div class="kpi-value" style="font-size:1.6rem;" id="kpiTopViolation">Reckless Driving</div>
+          <div class="kpi-footer warning">
+            <span>⚡</span>
+            <span id="kpiTopViolationCount">322 incidents in Cluster 0</span>
+          </div>
+        </div>
+
+        <div class="kpi-card" style="--kpi-color: #A855F7;">
+          <div class="kpi-header">
+            <span class="kpi-label">Avg Danger Severity</span>
+            <span class="kpi-icon">🛡️</span>
+          </div>
+          <div class="kpi-value" id="kpiAvgSeverity">7.4 / 10</div>
+          <div class="kpi-footer positive">
+            <span>⚖️</span>
+            <span>Weighted danger scoring</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DYNAMIC FILTER TOOLBAR -->
+      <div class="filter-toolbar">
+        <div class="filter-row">
+          <span class="filter-label">Violation Type:</span>
+          <div class="pills-group" id="violationFilterPills">
+            <button class="pill-btn active" data-type="ALL">All Categories</button>
+            <button class="pill-btn" data-type="Speeding">Speeding</button>
+            <button class="pill-btn" data-type="Red Light Violation">Red Light</button>
+            <button class="pill-btn" data-type="DUI">DUI</button>
+            <button class="pill-btn" data-type="Reckless Driving">Reckless Driving</button>
+            <button class="pill-btn" data-type="Illegal Turn">Illegal Turn</button>
+            <button class="pill-btn" data-type="Using Mobile Phone">Mobile Phone</button>
+            <button class="pill-btn" data-type="Seatbelt Violation">Seatbelt</button>
+          </div>
+        </div>
+
+        <div class="filter-row">
+          <span class="filter-label">Day of Week:</span>
+          <div class="pills-group" id="dayFilterPills">
+            <button class="pill-btn active" data-day="ALL">All Days</button>
+            <button class="pill-btn" data-day="Monday">Mon</button>
+            <button class="pill-btn" data-day="Tuesday">Tue</button>
+            <button class="pill-btn" data-day="Wednesday">Wed</button>
+            <button class="pill-btn" data-day="Thursday">Thu</button>
+            <button class="pill-btn" data-day="Friday">Fri</button>
+            <button class="pill-btn" data-day="Saturday">Sat</button>
+            <button class="pill-btn" data-day="Sunday">Sun</button>
+          </div>
+
+          <div class="search-input-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" placeholder="Search coordinates or corridors (e.g., 40.75, -73.98)...">
+          </div>
+        </div>
+      </div>
+
+      <!-- CHARTS SECTION -->
+      <div class="charts-grid-2">
+        <!-- Chart 1: 24h Hourly Curve with Anomaly Highlighting -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <div class="chart-title-group">
+              <h3>⏰ 24-Hour Violation Curve & Spike Anomaly</h3>
+              <p>Hourly volume distribution with statistical spike flags ($Z \ge 1.5$)</p>
+            </div>
+            <span class="badge badge-danger" id="badgeHourSpike">Spike at 16:00</span>
+          </div>
+          <div class="chart-canvas-wrapper">
+            <canvas id="hourlyChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Chart 2: Day of Week Distribution -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <div class="chart-title-group">
+              <h3>📅 Day of Week Volume Distribution</h3>
+              <p>Weekly trend across weekday rush hours and weekend patrol periods</p>
+            </div>
+            <span class="badge badge-cyan">Weekly Aggregate</span>
+          </div>
+          <div class="chart-canvas-wrapper">
+            <canvas id="dailyChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Chart 3: Violation Breakdown -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <div class="chart-title-group">
+              <h3>📊 Infractions by Severity Weight</h3>
+              <p>Categorical volume proportional to municipal danger penalty</p>
+            </div>
+            <span class="badge badge-warning">Severity Index</span>
+          </div>
+          <div class="chart-canvas-wrapper">
+            <canvas id="categoryChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Chart 4: Hourly Risk Index -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <div class="chart-title-group">
+              <h3>📈 Weighted Risk Index vs Violation Density</h3>
+              <p>Risk points calculated from severity weights $\times$ incident frequencies</p>
+            </div>
+            <span class="badge badge-success">Composite Score</span>
+          </div>
+          <div class="chart-canvas-wrapper">
+            <canvas id="riskScoreChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3: GEOSPATIAL MAP & 3D CLUSTERING
+         ====================================================================== -->
+    <section class="map-section" id="mapSection">
+      <div class="section-head" style="text-align:left; max-width:none; margin-bottom:1.5rem;">
+        <span class="badge badge-cyan">Geospatial Intelligence</span>
+        <h2>Machine Learning KMeans Hotspot Map</h2>
+        <p>Interactive spatial mapping of 5 unsupervised KMeans clusters and individual incident points across the urban grid.</p>
+      </div>
+
+      <div class="map-layout">
+        <div class="map-wrapper-card">
+          <div class="map-header">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span class="badge badge-cyan">Interactive Carto Dark Map</span>
+              <span style="font-size:0.8rem; color:#94A3B8;">● Centroids with Radar Pulse & Incident Pins</span>
+            </div>
+            <div style="display:flex; gap:8px;">
+              <button class="btn btn-secondary btn-sm" id="btnTogglePins">Toggle Incident Pins</button>
+              <button class="btn btn-secondary btn-sm" id="btnResetMapZoom">Center Map</button>
+            </div>
+          </div>
+          
+          <div id="trafficMap"></div>
+        </div>
+
+        <div class="map-sidebar-card">
+          <div style="font-size:0.95rem; font-weight:700; color:#FFFFFF; border-bottom:1px solid var(--border-subtle); padding-bottom:0.5rem;">
+            🗺️ Identified Cluster Centroids
+          </div>
+          <p style="font-size:0.8rem; color:#94A3B8;">Click any cluster card below to fly to that geographic coordinate:</p>
+
+          <div class="cluster-pills-list" id="clusterSidebarList">
+            <!-- Dynamically populated via app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4: HIGH-FREQUENCY CORRIDORS & ANOMALY AUDIT
+         ====================================================================== -->
+    <section class="features-section" id="auditSection" style="padding-top:2rem;">
+      <div class="section-head">
+        <span class="badge badge-danger">Surveillance & Enforcement</span>
+        <h2>High-Risk Corridors & Hourly Anomaly Audit</h2>
+        <p>Ranked coordinate hot corridors and statistical Z-Score audit trail across the entire 24-hour cycle.</p>
+      </div>
+
+      <!-- Table: Top Corridors -->
+      <div class="table-card">
+        <div class="table-header-row">
+          <div>
+            <h3 style="font-size:1.1rem; color:#FFF;">📍 Top 10 High-Frequency Violation Corridors</h3>
+            <p style="font-size:0.8rem; color:#94A3B8;">Ranked coordinate intersections requiring focused patrol presence</p>
+          </div>
+          <span class="badge badge-cyan">Spatial Ranking</span>
+        </div>
+        <table class="data-table" id="corridorsTable">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Corridor Coordinates</th>
+              <th>Total Incidents</th>
+              <th>Density Share</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="corridorsTableBody">
+            <!-- Dynamically rendered -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Table: Hourly Anomaly Audit -->
+      <div class="table-card">
+        <div class="table-header-row">
+          <div>
+            <h3 style="font-size:1.1rem; color:#FFF;">📈 24-Hour Statistical Surge Audit Log</h3>
+            <p style="font-size:0.8rem; color:#94A3B8;">Calculated Z-Scores, anomaly classifications, and patrol recommendations</p>
+          </div>
+          <span class="badge badge-warning">Z-Score Threshold: 1.50</span>
+        </div>
+        <table class="data-table" id="anomalyAuditTable">
+          <thead>
+            <tr>
+              <th>Hour</th>
+              <th>Violations</th>
+              <th>Risk Score</th>
+              <th>Z-Score</th>
+              <th>Status</th>
+              <th>Primary Infraction</th>
+              <th>Action Recommendation</th>
+            </tr>
+          </thead>
+          <tbody id="anomalyAuditTableBody">
+            <!-- Dynamically rendered -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5: REST API EXPLORER & DEVELOPER CONSOLE
+         ====================================================================== -->
+    <section class="features-section" id="apiSection" style="padding-top:2rem;">
+      <div class="section-head">
+        <span class="badge badge-cyan">Developer Hub</span>
+        <h2>Integrated REST API Console</h2>
+        <p>Real-time machine-readable JSON endpoints for dispatch automation, external traffic HUDs, and civic integrations.</p>
+      </div>
+
+      <div class="api-explorer-card">
+        <div class="api-tabs-nav" id="apiTabs">
+          <button class="api-tab-btn active" data-endpoint="/api/summary">GET /api/summary</button>
+          <button class="api-tab-btn" data-endpoint="/api/hotspots">GET /api/hotspots</button>
+          <button class="api-tab-btn" data-endpoint="/api/hourly">GET /api/hourly</button>
+          <button class="api-tab-btn" data-endpoint="/api/corridors">GET /api/corridors</button>
+        </div>
+
+        <div class="api-endpoint-display">
+          <span class="http-method">GET</span>
+          <span class="http-url" id="apiActiveUrl">http://localhost:3000/api/summary</span>
+          <button class="btn btn-secondary btn-sm" id="btnTestApi">▶ Send Request</button>
+          <button class="btn btn-secondary btn-sm" id="btnCopyJson">📋 Copy JSON</button>
+        </div>
+
+        <pre class="json-output-viewer" id="apiJsonViewer">// Click "Send Request" to fetch live JSON telemetry...</pre>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <div style="font-weight:700; color:#FFF; font-size:1.05rem; margin-bottom:4px;">Smart Traffic Violation Pattern Detector</div>
+        <p>Built with Apache PySpark, Pandas, KMeans MLlib & Leaflet Geospatial Intelligence.</p>
+        <p style="margin-top:6px; color:#64748B;">© 2026 MIT License · Municipal Open Data Project</p>
+      </div>
+
+      <div style="display:flex; gap:1.5rem; align-items:center;">
+        <a href="#topNavbar" style="color:#38BDF8; text-decoration:none; font-weight:600;">Back to Top ↑</a>
+        <a href="https://github.com/Nalinandini/Smart_Traffic_Violation_Pattern_Detector" target="_blank" style="color:#94A3B8; text-decoration:none;">GitHub Repo</a>
+        <a href="/api/summary" target="_blank" style="color:#94A3B8; text-decoration:none;">JSON API</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- NOTIFICATION TOAST -->
+  <div class="toast-notice" id="toastNotice">
+    <span style="font-size:1.2rem;" id="toastIcon">ℹ️</span>
+    <span id="toastMsg">Notification message</span>
+  </div>
+
+  <!-- Leaflet Map JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
